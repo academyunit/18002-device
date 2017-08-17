@@ -10,12 +10,12 @@
     <a href="#" class="logotype page-header__logo">Device</a>
     <div class="page-header__actions">
       <form action="#" class="search-form page-header__search">
-        <input type="search" class="search-form__field">
+        <input type="search" class="search-form__field" placeholder="Поиск по сайту">
         <button class="search-form__send">Найти</button>
       </form>
       <ul class="page-header__profile">
         <li class="page-header__profile-item">
-          <a href="" class="page-header__profile-link page-header__profile-link_signin"></a>
+          <a href="" class="page-header__profile-link page-header__profile-link_signin">Войти</a>
         </li>
       </ul>
       <ul class="page-header__options">
@@ -39,9 +39,9 @@
               <li><a class="page-header__nav-goods-link" href="#">Экшн-камеры</a></li>
             </ul>
           </li>
-          <li class="page-header__nav-item">Доставка</li>
-          <li class="page-header__nav-item">Гарантия</li>
-          <li class="page-header__nav-item">Контакты</li>
+          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Доставка</a></li>
+          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Гарантия</a></li>
+          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -50,6 +50,11 @@
 <main>
   <h1>Title</h1>
   <article class="breadcrumbs">
+    <ul class="breadcrumbs-list">
+      <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Главная</a></li>
+      <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Каталог товаров</a></li>
+      <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Моноподы для селфи</a></li>
+    </ul>
   </article>
   <section class="products">
     <div class="products__titles">
@@ -73,7 +78,6 @@
       <div class="container">
         <section class="products__items-filter">
           <form action="">
-            <!-- Нужны ли классы fieldset ? -->
             <fieldset>
               <legend class="form-legend">Стоимость</legend>
               <div class="range-control">
@@ -90,24 +94,37 @@
             </fieldset>
             <fieldset>
               <legend class="form-legend">Цвет</legend>
-              <!-- нужно ли тут оборачивать контролы формы в дополнительные обертки? Например, label + input в div.form-control ? -->
-              <input type="checkbox" id="color_1">
-              <label for="color_1"></label>
-              <input type="checkbox" id="color_2">
-              <label for="color_2"></label>
-              <input type="checkbox" id="color_3">
-              <label for="color_3"></label>
-              <input type="checkbox" id="color_4">
-              <label for="color_4"></label>
-              <input type="checkbox" id="color_5">
-              <label for="color_5"></label>
+              <div class="form-control">
+                <input type="checkbox" id="color_1">
+                <label for="color_1">Черный</label>
+              </div>
+              <div class="form-control">
+                <input type="checkbox" id="color_2">
+                <label for="color_2">Белый</label>
+              </div>
+              <div class="form-control">
+                <input type="checkbox" id="color_3">
+                <label for="color_3">Синий</label>
+              </div>
+              <div class="form-control">
+                <input type="checkbox" id="color_4">
+                <label for="color_4">Красный</label>
+              </div>
+              <div class="form-control">
+                <input type="checkbox" id="color_5">
+                <label for="color_5">Розовый</label>
+              </div>
             </fieldset>
             <fieldset>
               <legend class="form-legend">Bluetooth</legend>
-              <input type="radio" name="bluetooth" id="bluetooth_1">
-              <label for="bluetooth_1"></label>
-              <input type="radio" name="bluetooth" id="bluetooth_0">
-              <label for="bluetooth_0"></label>
+              <div class="form-control">
+                <input type="radio" name="bluetooth" id="bluetooth_1">
+                <label for="bluetooth_1">Есть</label>
+              </div>
+              <div class="form-control">
+                <input type="radio" name="bluetooth" id="bluetooth_0">
+                <label for="bluetooth_0">Нет</label>
+              </div>
             </fieldset>
             <button class="btn products__items-filter-btn">Показать</button>
           </form>

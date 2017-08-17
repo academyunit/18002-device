@@ -10,12 +10,12 @@
     <a href="#" class="logotype page-header__logo">Device</a>
     <div class="page-header__actions">
       <form action="#" class="search-form page-header__search">
-        <input type="search" class="search-form__field">
+        <input type="search" class="search-form__field" placeholder="Поиск по сайту">
         <button class="search-form__send">Найти</button>
       </form>
       <ul class="page-header__profile">
         <li class="page-header__profile-item">
-          <a href="" class="page-header__profile-link page-header__profile-link_signin"></a>
+          <a href="" class="page-header__profile-link page-header__profile-link_signin">Войти</a>
         </li>
       </ul>
       <ul class="page-header__options">
@@ -39,9 +39,9 @@
               <li><a class="page-header__nav-goods-link" href="#">Экшн-камеры</a></li>
             </ul>
           </li>
-          <li class="page-header__nav-item">Доставка</li>
-          <li class="page-header__nav-item">Гарантия</li>
-          <li class="page-header__nav-item">Контакты</li>
+          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Доставка</a></li>
+          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Гарантия</a></li>
+          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -55,8 +55,8 @@
           <img src="#" alt="" class="slider-promo__item-photo">
         </figure>
         <section class="slider-promo__item-info">
-          <b class="slider-promo__item-info-title">Делай селфи,
-            как Бен Стиллер!</b>
+          <h2 class="slider-promo__item-info-title">Делай селфи,
+            как Бен Стиллер!</h2>
           <p class="slider-promo__item-info-description">
             Самая длинная палка для селфи доступна в нашем магазине.
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
@@ -83,8 +83,8 @@
           <img src="#" alt="" class="slider-promo__item-photo">
         </figure>
         <section class="slider-promo__item-info">
-          <b class="slider-promo__item-info-title">Худеем
-            правильно!</b>
+          <h2 class="slider-promo__item-info-title">Худеем
+            правильно!</h2>
           <p class="slider-promo__item-info-description">
             Мотивирующие фитнесc-браслеты помогут найти в себе силы не пропускать
             занятия и соблюдать диету.
@@ -103,8 +103,8 @@
           <img src="#" alt="" class="slider-promo__item-photo">
         </figure>
         <section class="slider-promo__item-info">
-          <b class="slider-promo__item-info-title">Порхает как бабочка,
-            жалит как пчела!</b>
+          <h2 class="slider-promo__item-info-title">Порхает как бабочка,
+            жалит как пчела!</h2>
           <p class="slider-promo__item-info-description">
             Этот обычный, на первый взгляд, квадрокоптер оснащен
             мощным лазером, замаскированным под стандартную камеру.
@@ -122,6 +122,13 @@
           </div>
         </div>
       </article>
+      <div class="slider-promo__controls">
+        <ul class="a slider-promo__controls-list">
+          <li class="slider-promo__controls-item"></li>
+          <li class="slider-promo__controls-item"></li>
+          <li class="slider-promo__controls-item"></li>
+        </ul>
+      </div>
     </section>
     <section class="categories">
       <article class="categories__box">
@@ -205,9 +212,9 @@
   <div class="container">
     <section class="partners">
       <ul class="partners__list">
-        <li class="partners-item"><a href="#" class="partners-link"><img src="#" alt=""></a></li>
-        <li class="partners-item"><a href="#" class="partners-link"><img src="#" alt=""></a></li>
-        <li class="partners-item"><a href="#" class="partners-link"><img src="#" alt=""></a></li>
+        <li class="partners__list-item"><a href="#" class="partners__list-link"><img src="#" alt=""></a></li>
+        <li class="partners__list-item"><a href="#" class="partners__list-link"><img src="#" alt=""></a></li>
+        <li class="partners__list-item"><a href="#" class="partners__list-link"><img src="#" alt=""></a></li>
       </ul>
     </section>
     <div class="company-info">
@@ -232,7 +239,7 @@
         <div class="company-info__contacts-map">
           <!-- Yandex widget here ? -->
         </div>
-        <a href="#" class="btn company-info__contacts-btn">Напишите нам</a>
+        <button class="btn company-info__contacts-btn">Напишите нам</button>
       </section>
     </div>
   </div>
@@ -240,7 +247,7 @@
 <footer class="page-footer">
   <div class="container">
     <div class="page-footer__info">
-      <a href="#" class="logotype page-footer__info-logotype">DEVICE</a>
+      <a href="#" class="logotype page-footer__info-logotype">Device</a>
       <address class="page-footer__info-address">г. Москва, ул. Строителей, 15</address>
     </div>
     <nav class="page-footer__menu">
@@ -281,7 +288,7 @@
   </div>
 </footer>
 <div class="modal-window modal-feedback">
-  <a class="modal-feedback__close">X</a>
+  <button class="modal-feedback__close">X</button>
   <form action="">
     <div class="modal-feedback__user-data">
       <label>
@@ -294,9 +301,7 @@
       </label>
     </div>
     <div class="modal-feedback__message">
-      <label>
-        <textarea name="message" id="" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-      </label>
+      <textarea name="message" id="" cols="30" rows="10" placeholder="В свободной форме"></textarea>
     </div>
     <input type="submit" name="Отправить">
   </form>
