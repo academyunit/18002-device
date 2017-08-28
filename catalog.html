@@ -32,17 +32,35 @@
           <li class="page-header__nav-item">
             <a href="#" class="page-header__nav-link">Каталог товаров</a>
             <ul class="page-header__nav-goods">
-              <li><a class="page-header__nav-goods-link" href="#">Виртуальная реальность</a></li>
-              <li><a class="page-header__nav-goods-link" href="#">Фитнесс-браслеты</a></li>
-              <li><a class="page-header__nav-goods-link" href="#">Квадрокоптеры</a></li>
-              <li><a class="page-header__nav-goods-link" href="#">Моноподы для селфи</a></li>
-              <li><a class="page-header__nav-goods-link" href="#">Умные часы</a></li>
-              <li><a class="page-header__nav-goods-link" href="#">Экшн-камеры</a></li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Фитнесс-браслеты</a>
+              </li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Квадрокоптеры</a>
+              </li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Моноподы для селфи</a>
+              </li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Умные часы</a>
+              </li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Экшн-камеры</a>
+              </li>
             </ul>
           </li>
-          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Доставка</a></li>
-          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Гарантия</a></li>
-          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Контакты</a></li>
+          <li class="page-header__nav-item">
+            <a href="#" class="page-header__nav-link">Доставка</a>
+          </li>
+          <li class="page-header__nav-item">
+            <a href="#" class="page-header__nav-link">Гарантия</a>
+          </li>
+          <li class="page-header__nav-item">
+            <a href="#" class="page-header__nav-link">Контакты</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -88,33 +106,38 @@
                 <div class="range-control__toggle range-control__toggle_min"></div>
                 <div class="range-control__toggle range-control__toggle_max"></div>
                 <div class="range-control__selected-price">
-                  от <span class="range-control__selected-price-min">0</span>
-                  до <span class="range-control__selected-price-max">5000</span>
+                  <label for="range-control__selected-price-min">от</label>
+                  <input class="range-control__selected-price-min" id="range-control__selected-price-min" type="text" value="0">
+                  <label for="range-control__selected-price-max">до</label>
+                  <input type="text" class="range-control__selected-price-max" id="range-control__selected-price-max" value="5000">
                 </div>
               </div>
             </fieldset>
             <fieldset>
               <legend class="form-legend">Цвет</legend>
-              <div class="form-control">
-                <input type="checkbox" id="color_1">
-                <label for="color_1">Черный</label>
-              </div>
-              <div class="form-control">
-                <input type="checkbox" id="color_2">
-                <label for="color_2">Белый</label>
-              </div>
-              <div class="form-control">
-                <input type="checkbox" id="color_3">
-                <label for="color_3">Синий</label>
-              </div>
-              <div class="form-control">
-                <input type="checkbox" id="color_4">
-                <label for="color_4">Красный</label>
-              </div>
-              <div class="form-control">
-                <input type="checkbox" id="color_5">
-                <label for="color_5">Розовый</label>
-              </div>
+              <ul class="products__items-filter-colors">
+                <!-- все ли тут правильно по БЭМ и нужно ли было заменять это на список вместо input + label обернутые в div.form-control ? -->
+                <li class="products__items-filter-color">
+                  <input class="visually-hidden products__items-filter-color-input" id="color_1" type="checkbox" name="filter_color_1">
+                  <label class="products__items-filter-color-label" for="color_1">Черный</label>
+                </li>
+                <li class="products__items-filter-color">
+                  <input class="visually-hidden products__items-filter-color-input" id="color_2" type="checkbox" name="filter_color_2">
+                  <label class="products__items-filter-color-label" for="color_2">Белый</label>
+                </li>
+                <li class="products__items-filter-color">
+                  <input class="visually-hidden products__items-filter-color-input" id="color_3" type="checkbox" name="filter_color_3">
+                  <label class="products__items-filter-color-label" for="color_3">Синий</label>
+                </li>
+                <li class="products__items-filter-color">
+                  <input class="visually-hidden products__items-filter-color-input" id="color_4" type="checkbox" name="filter_color_4">
+                  <label class="products__items-filter-color-label" for="color_4">Красный</label>
+                </li>
+                <li class="products__items-filter-color">
+                  <input class="visually-hidden products__items-filter-color-input" id="color_5" type="checkbox" name="filter_color_5">
+                  <label class="products__items-filter-color-label" for="color_5">Розовый</label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset>
               <legend class="form-legend">Bluetooth</legend>
@@ -210,14 +233,14 @@
 <footer class="page-footer">
   <div class="container">
     <div class="page-footer__info">
-      <a href="#" class="logotype page-footer__info-logotype">DEVICE</a>
+      <a href="#" class="logotype page-footer__info-logotype">Device</a>
       <address class="page-footer__info-address">г. Москва, ул. Строителей, 15</address>
     </div>
     <nav class="page-footer__menu">
       <ul class="page-footer__menu-list">
-        <li class="page-footer__menu-item">Доставка</li>
-        <li class="page-footer__menu-item">Гарантия</li>
-        <li class="page-footer__menu-item">Контакты</li>
+        <li class="page-footer__menu-item"><a href="#" class="page-footer__menu-link">Доставка</a></li>
+        <li class="page-footer__menu-item"><a href="#" class="page-footer__menu-link">Гарантия</a></li>
+        <li class="page-footer__menu-item"><a href="#" class="page-footer__menu-link">Контакты</a></li>
       </ul>
       <div class="page-footer__social">
         <a href="#" class="btn page-footer__social-btn page-footer__social-btn_facebook"></a>
@@ -245,14 +268,15 @@
         Тел.: +7 (495) 495-95-95
       </address>
       <div class="page-footer__copyright">
-        <a href="#"></a>
+        <a href="#"><img src="img/logo-html.png" width="27" height="35" alt="HTMLAcademy"></a>
       </div>
     </div>
   </div>
 </footer>
 <div class="modal-window modal-feedback">
-  <a class="modal-feedback__close">X</a>
-  <form action="">
+  <button class="modal-feedback__close">X</button>
+  <h2 class="visually-hidden modal-map__container-title">Как с нами связаться?</h2>
+  <form method="post">
     <div class="modal-feedback__user-data">
       <label>
         Ваше имя:
@@ -264,16 +288,18 @@
       </label>
     </div>
     <div class="modal-feedback__message">
-      <label>
-        <textarea name="message" id="" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-      </label>
+      <textarea name="message" id="" cols="30" rows="10" placeholder="В свободной форме"></textarea>
     </div>
     <input type="submit" name="Отправить">
   </form>
 </div>
 <div class="modal-window modal-map">
-  <a class="modal-map__close">X</a>
+  <button class="modal-map__close">Закрыть</button>
   <div class="modal-map__container">
+    <h2 class="visually-hidden modal-map__container-title">Как до нас добраться</h2>
+    <p class="modal-map__container-map-no-js">
+      <img src="img/map.jpg" width="560" height="222" alt="Наш офис по адресу ул. Хуббы-буббы дом 1 ОАО 'Академия ХТМЛ'">
+    </p>
     <!-- Ya code goes here -->
   </div>
 </div>

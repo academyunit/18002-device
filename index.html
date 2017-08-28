@@ -32,17 +32,35 @@
           <li class="page-header__nav-item">
             <a href="#" class="page-header__nav-link">Каталог товаров</a>
             <ul class="page-header__nav-goods">
-              <li><a class="page-header__nav-goods-link" href="#">Виртуальная реальность</a></li>
-              <li><a class="page-header__nav-goods-link" href="#">Фитнесс-браслеты</a></li>
-              <li><a class="page-header__nav-goods-link" href="#">Квадрокоптеры</a></li>
-              <li><a class="page-header__nav-goods-link" href="#">Моноподы для селфи</a></li>
-              <li><a class="page-header__nav-goods-link" href="#">Умные часы</a></li>
-              <li><a class="page-header__nav-goods-link" href="#">Экшн-камеры</a></li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Фитнесс-браслеты</a>
+              </li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Квадрокоптеры</a>
+              </li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Моноподы для селфи</a>
+              </li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Умные часы</a>
+              </li>
+              <li class="page-header__nav-goods-item">
+                <a class="page-header__nav-goods-link" href="#">Экшн-камеры</a>
+              </li>
             </ul>
           </li>
-          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Доставка</a></li>
-          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Гарантия</a></li>
-          <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Контакты</a></li>
+          <li class="page-header__nav-item">
+            <a href="#" class="page-header__nav-link">Доставка</a>
+          </li>
+          <li class="page-header__nav-item">
+            <a href="#" class="page-header__nav-link">Гарантия</a>
+          </li>
+          <li class="page-header__nav-item">
+            <a href="#" class="page-header__nav-link">Контакты</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -124,11 +142,13 @@
         </div>
       </article>
       <div class="slider-promo__controls">
-        <ul class="a slider-promo__controls-list">
-          <li class="slider-promo__controls-item"></li>
-          <li class="slider-promo__controls-item"></li>
-          <li class="slider-promo__controls-item"></li>
-        </ul>
+        <!-- нормально на радио с лейблом завесить их тут просто или еще нужно дополнительно обернуть в p или div эти label + input? -->
+        <label for="promo-slide-1"></label>
+        <input class="slider-promo__controls-control" id="promo-slide-1" type="radio" name="promo-slide">
+        <label for="promo-slide-2"></label>
+        <input class="slider-promo__controls-control" id="promo-slide-2" type="radio" name="promo-slide">
+        <label for="promo-slide-3"></label>
+        <input class="slider-promo__controls-control" id="promo-slide-3" type="radio" name="promo-slide">
       </div>
     </section>
     <section class="categories">
@@ -186,9 +206,15 @@
     <div class="container">
       <div class="slider-services__menu">
         <ul class="slider-services__menu-list">
-          <li class="slider-services__menu-item">Доставка</li>
-          <li class="slider-services__menu-item">Гарантия</li>
-          <li class="slider-services__menu-item">Кредит</li>
+          <li class="slider-services__menu-item">
+            <a href="#" class="slider-services__menu-link">Доставка</a>
+          </li>
+          <li class="slider-services__menu-item">
+            <a href="#" class="slider-services__menu-link">Гарантия</a>
+          </li>
+          <li class="slider-services__menu-item">
+            <a href="#" class="slider-services__menu-link">Кредит</a>
+          </li>
         </ul>
       </div>
       <div class="slider-services__items">
@@ -270,9 +296,9 @@
     </div>
     <nav class="page-footer__menu">
       <ul class="page-footer__menu-list">
-        <li class="page-footer__menu-item">Доставка</li>
-        <li class="page-footer__menu-item">Гарантия</li>
-        <li class="page-footer__menu-item">Контакты</li>
+        <li class="page-footer__menu-item"><a href="#" class="page-footer__menu-link">Доставка</a></li>
+        <li class="page-footer__menu-item"><a href="#" class="page-footer__menu-link">Гарантия</a></li>
+        <li class="page-footer__menu-item"><a href="#" class="page-footer__menu-link">Контакты</a></li>
       </ul>
       <div class="page-footer__social">
         <a href="#" class="btn page-footer__social-btn page-footer__social-btn_facebook"></a>
@@ -307,7 +333,8 @@
 </footer>
 <div class="modal-window modal-feedback">
   <button class="modal-feedback__close">X</button>
-  <form action="">
+  <h2 class="visually-hidden modal-map__container-title">Как с нами связаться?</h2>
+  <form method="post">
     <div class="modal-feedback__user-data">
       <label>
         Ваше имя:
@@ -325,8 +352,12 @@
   </form>
 </div>
 <div class="modal-window modal-map">
-  <a class="modal-map__close">X</a>
+  <button class="modal-map__close">Закрыть</button>
   <div class="modal-map__container">
+    <h2 class="visually-hidden modal-map__container-title">Как до нас добраться</h2>
+    <p class="modal-map__container-map-no-js">
+      <img src="img/map.jpg" width="560" height="222" alt="Наш офис по адресу ул. Хуббы-буббы дом 1 ОАО 'Академия ХТМЛ'">
+    </p>
     <!-- Ya code goes here -->
   </div>
 </div>
