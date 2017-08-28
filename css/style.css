@@ -1,0 +1,24 @@
+body {
+    font-family: "Gilroy ExtraBold", sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    color: black;
+    font-weight: 100;
+}
+
+.page-header__nav-link {
+    font-family: "Gilroy ExtraBold", sans-serif;
+    font-size: 18px;
+    line-height: 1.2em; /** нет в photoshop такого параметра для этого элемента */
+    color: black;
+    font-weight: bold;
+}
+
+.company-info__contacts-title {
+    line-height: 1.2em; /* нет в photoshop параметра для этого заголовка */
+    font-family: "Gilroy ExtraBold", sans-serif;
+    font-weight: 400;
+    font-size: 47px;
+    color: black;
+}
+
