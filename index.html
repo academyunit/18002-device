@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <title>HTML Academy: Девайс</title>
 </head>
@@ -69,7 +70,9 @@
 <main>
   <div class="container">
     <section class="slider-promo">
+      <h2 class="visually-hidden">Лучшие товары 2017!</h2>
       <article class="slider-promo__item">
+        <h2 class="visually-hidden">Самая длинная селфи палка</h2>
         <figure class="slider-promo__item-container">
           <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи" class="slider-promo__item-photo">
         </figure>
@@ -98,6 +101,7 @@
         </div>
       </article>
       <article class="slider-promo__item">
+        <h2 class="visually-hidden">Мотивирующие фитнес-браслеты</h2>
         <figure class="slider-promo__item-container">
           <img src="img/slider-2.png" width="345" height="485" alt="Мотивирующие фитнеc-браслеты" class="slider-promo__item-photo">
         </figure>
@@ -118,6 +122,7 @@
         </div>
       </article>
       <article class="slider-promo__item">
+        <h2 class="visually-hidden">Квадрокоптер</h2>
         <figure class="slider-promo__item-container">
           <img src="img/slider-3.png" width="526" height="334" alt="обычный, на первый взгляд, квадрокоптер" class="slider-promo__item-photo">
         </figure>
@@ -152,6 +157,7 @@
       </div>
     </section>
     <section class="categories">
+      <h2 class="visually-hidden">Категории товаров</h2>
       <article class="categories__box">
         <a href="#" class="categories__box-container">
           <div class="categories__box-image">
@@ -203,6 +209,7 @@
     </section>
   </div>
   <section class="slider-services">
+    <h2 class="visually-hidden">Условия покупки</h2>
     <div class="container">
       <div class="slider-services__menu">
         <ul class="slider-services__menu-list">
@@ -219,16 +226,19 @@
       </div>
       <div class="slider-services__items">
         <section class="slider-services__items-item" id="slider-services_delivery">
+          <h2 class="visually-hidden">Доставка</h2>
           <b class="slider-services__items-title">Доставка</b>
           <p class="slider-services__items-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
             бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
         </section>
         <section class="slider-services__items-item" id="slider-services_guarantee">
+          <h2 class="visually-hidden">Гарантия</h2>
           <b class="slider-services__items-title">Гарантия</b>
           <p class="slider-services__items-description">Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
             Товар, не дом, конечно же.</p>
         </section>
         <section class="slider-services__items-item" id="slider-services_loan">
+          <h2 class="visually-hidden">Кредит</h2>
           <b class="slider-services__items-title">Кредит</b>
           <p class="slider-services__items-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут
             для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
@@ -237,26 +247,27 @@
     </div>
   </section>
   <div class="container">
-    <section class="partners">
-      <ul class="partners__list">
-        <li class="partners__list-item">
-          <a href="#" class="partners__list-link">
-            <img src="img/partners-1.jpg" width="260" height="100" alt="Dji">
+    <section class="brands">
+      <h2 class="visually-hidden">Наши бренды</h2>
+      <ul class="brands__list">
+        <li class="brands__list-item">
+          <a href="#" class="brands__list-link">
+            <img src="img/brands-1.jpg" width="260" height="100" alt="Dji">
           </a>
         </li>
-        <li class="partners__list-item">
-          <a href="#" class="partners__list-link">
-            <img src="img/partners-2.jpg" width="260" height="100" alt="SPGadgets">
+        <li class="brands__list-item">
+          <a href="#" class="brands__list-link">
+            <img src="img/brands-2.jpg" width="260" height="100" alt="SPGadgets">
           </a>
         </li>
-        <li class="partners__list-item">
-          <a href="#" class="partners__list-link">
-            <img src="img/partners-3.jpg" width="260" height="100" alt="GoPro">
+        <li class="brands__list-item">
+          <a href="#" class="brands__list-link">
+            <img src="img/brands-3.jpg" width="260" height="100" alt="GoPro">
           </a>
         </li>
-        <li class="partners__list-item">
-          <a href="#" class="partners__list-link">
-            <img src="img/partners-4.jpg" width="260" height="100" alt="VIVE">
+        <li class="brands__list-item">
+          <a href="#" class="brands__list-link">
+            <img src="img/brands-4.jpg" width="260" height="100" alt="VIVE">
           </a>
         </li>
       </ul>
@@ -294,7 +305,7 @@
       <a href="#" class="logotype page-footer__info-logotype">Device</a>
       <address class="page-footer__info-address">г. Москва, ул. Строителей, 15</address>
     </div>
-    <nav class="page-footer__menu">
+    <div class="page-footer__menu">
       <ul class="page-footer__menu-list">
         <li class="page-footer__menu-item"><a href="#" class="page-footer__menu-link">Доставка</a></li>
         <li class="page-footer__menu-item"><a href="#" class="page-footer__menu-link">Гарантия</a></li>
@@ -305,7 +316,7 @@
         <a href="#" class="btn page-footer__social-btn page-footer__social-btn_instagran"></a>
         <a href="#" class="btn page-footer__social-btn page-footer__social-btn_ftwitter"></a>
       </div>
-    </nav>
+    </div>
     <div class="page-footer__profile">
       <ul class="page-footer__profile-list">
         <li class="page-footer__profile-item">
@@ -332,7 +343,7 @@
   </div>
 </footer>
 <div class="modal-window modal-feedback">
-  <button class="modal-feedback__close">X</button>
+  <button class="modal-feedback__close">Закрыть</button>
   <h2 class="visually-hidden modal-map__container-title">Как с нами связаться?</h2>
   <form method="post">
     <div class="modal-feedback__user-data">
@@ -346,9 +357,9 @@
       </label>
     </div>
     <div class="modal-feedback__message">
-      <textarea name="message" id="" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+      <textarea name="message" placeholder="В свободной форме"></textarea>
     </div>
-    <input type="submit" name="Отправить">
+    <input type="submit" value="Отправить">
   </form>
 </div>
 <div class="modal-window modal-map">
