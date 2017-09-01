@@ -1,9 +1,66 @@
+/*
+@todo-self:
+- нормально подключить все шрифты и разобрать бардак с жирными/обычными шрифтами
+
+*/
+@font-face {
+    font-family: "Gilroy ExtraBold";
+    src:
+            url("../fonts/gilroyextrabold.woff2") format("woff2"),
+            url("../fonts/gilroyextrabold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Gilroy Light"; /* ? */
+    src:
+            url("../fonts/gilroylight.woff2") format("woff2"),
+            url("../fonts/gilroylight.woff") format("woff");
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
 body {
+    width: 1440px;
+    /*
+    Нужно тут центровать так body?
+    */
+    /*margin: 0 auto;*/
+
     font-family: "Gilroy ExtraBold", sans-serif;
+    font-weight: 100;
     font-size: 15px;
     line-height: 30px;
     color: black;
-    font-weight: 100;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.page-header-wrapper {
+    width: 1040px;
+    margin: 0 auto;
 }
 
 .page-header__nav-link {
@@ -20,4 +77,382 @@ body {
     font-weight: 400;
     font-size: 47px;
     color: black;
+}
+
+/* Header */
+
+.page-header {
+    min-height: 186px;
+    margin-top: 40px;
+
+    background: #f7e296;
+    border: 1px solid transparent;
+}
+
+/* Header - upper level (search + actions) */
+.page-header__logo {
+    display: block;
+    margin-top: -16px;
+
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.page-header__actions {
+    display: flex;
+
+    margin-bottom: 16px;
+}
+
+/* Search block */
+.page-header__search {
+    width: 479px;
+}
+
+.search-form__field,
+.search-form__send {
+    background-color: #f7e296;
+}
+
+.search-form__field {
+    width: 357px;
+    padding: 10px;
+
+    outline: none;
+    border: none;
+
+    padding-bottom: 14px;
+
+    border-bottom: 2px solid black;
+}
+
+.search-form__field {
+    position: relative;
+
+    padding-left: 40px;
+}
+
+.search-form__control:first-of-type {
+    position: relative;
+
+    display: inline-block;
+
+    min-height: 49px;
+}
+
+.search-form__control:first-of-type::before {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 3px;
+
+    width: 40px;
+    height: 40px;
+
+    content: "";
+    background: url("../img/search.svg") no-repeat;
+}
+
+.search-form__send {
+    /*display: none;*/
+    width: 83px;
+    height: 48px;
+    margin-left: -3px;
+
+    border: 2px solid black;
+}
+
+.search-form__send_active {
+   display: inline-block;
+}
+
+/* User profile block */
+.page-header__profile {
+    display: flex;
+    align-items: center;
+
+    width: 200px;
+
+    list-style: none;
+    margin: 0;
+    margin-left: 117px;
+    padding: 0;
+}
+
+.page-header__options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 220px;
+
+    list-style: none;
+    margin: 0;
+    margin-left: 80px;
+    padding: 0;
+}
+
+/* Header - lower level (navigation) */
+.page-header__nav {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Каталог товаров, доставка, гарантия, контакты */
+.page-header__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header__nav-item:first-of-type {
+    position: relative;
+}
+
+.page-header__nav-item:first-of-type::after {
+    position: absolute;
+    top: 5px;
+    left: 230px;
+    width: 40px;
+    height: 40px;
+
+    content: "";
+    background: url("../img/plus.svg") no-repeat;
+}
+
+.page-header__nav-item:nth-of-type(2) {
+    margin-left: 312px;
+}
+
+.page-header__nav-item:nth-of-type(3) {
+    margin-left: 34px;
+}
+
+.page-header__nav-item:nth-of-type(4) {
+    margin-left: 98px;
+}
+
+.page-header__nav-link {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* Подменю в разделе "Каталог товаров" */
+.page-header__nav-goods {
+    position: absolute;
+    z-index: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 600px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    /* for debugging */
+    background: rgba(255,0,0,0.2);
+}
+
+.page-header__nav-goods-item {
+    width: 200px;
+}
+
+/*
+    Хак ждя "Каталог товаров - умные часа"
+    Можно ли так делать? Или лучше создать 3 раздельных ненумерованных списка и положить туда ве элементы?
+*/
+.page-header__nav-goods-item:nth-of-type(5) {
+    width: 400px;
+}
+
+/* Slider */
+
+.slider-promo {
+    position: relative;
+
+    margin-bottom: 109px;
+
+    background: linear-gradient(
+            to bottom,
+            #ccc 10%, /* для дебага */
+            transparent 10%
+    );
+}
+
+.slider-promo__item {
+    position: relative;
+
+    display: flex;
+
+    border: 1px solid black;
+}
+
+.slider-promo__item::before {
+    position: absolute;
+    top: 100px;
+    right: 80px;
+
+    width: 168px;
+    height: 102px;
+
+    content: "00";
+    color: white;
+    font-size: 172px;
+}
+
+.slider-promo__item:nth-of-type(1)::before {
+    content: "01";
+}
+
+.slider-promo__item:nth-of-type(2)::before {
+    content: "02";
+}
+
+.slider-promo__item:nth-of-type(3)::before {
+    content: "03";
+}
+
+.slider-promo__item-main-content {
+    position: relative;
+
+    width: 500px;
+
+    margin-top: 87px;
+    margin-left: 120px;
+}
+
+.slider-promo__item-main-content::before {
+    position: absolute;
+
+    width: 100px;
+    height: 8px;
+
+    content: "";
+    background: white;
+}
+
+
+.slider-promo__item-info-title {
+    font-size: 47px;
+    line-height: 1;
+}
+
+.slider-promo__item-specification {
+    display: flex;
+    justify-content: space-around;
+}
+
+.slider-promo__item-specification-value {
+    font-size: 36px;
+}
+
+.slider-promo__controls {
+    position: absolute;
+    top: 336px;
+    right: 149px;
+}
+
+/* Categories */
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+
+    margin-bottom: 89px;
+}
+
+/* Slider - Services */
+
+.slider-services .container {
+    display: flex;
+}
+
+.slider-services__menu {
+    width: 300px;
+}
+
+.slider-services__items {
+    width: 760px;
+}
+
+.slider-services__menu-link {
+    font-size: 18px;
+}
+
+.slider-services__items-title {
+    font-size: 47px;
+}
+
+/* Brands */
+
+.brands__list {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+/* Feedback */
+
+.company-info {
+    display: flex;
+}
+
+.company-info__about-title {
+    font-size: 47px;
+}
+
+/* Footer */
+
+.page-footer {
+    min-height: 323px;
+    background: #464646;
+}
+
+.page-footer .container {
+    display: flex;
+}
+
+.page-footer__menu-list,
+.page-footer__profile-list,
+.page-footer__actions-list
+{
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* Components */
+.btn {
+    position: relative;
+    min-height: 41px;
+    min-width: 162px;
+
+    border: 1px solid black;
+}
+
+.btn::after {
+    position: absolute;
+    z-index: -1;
+    top: 10px;
+    left: 0;
+
+    width: 128%;
+
+    content: "";
+    box-shadow: -10px 0 0 4px #f0c52e;
 }
