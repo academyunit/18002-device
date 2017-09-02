@@ -219,34 +219,40 @@
       <div class="slider-services__menu">
         <ul class="slider-services__menu-list">
           <li class="slider-services__menu-item">
-            <a href="#" class="slider-services__menu-link">Доставка</a>
+            <a href="#" class="btn slider-services__menu-link">Доставка</a>
           </li>
           <li class="slider-services__menu-item">
-            <a href="#" class="slider-services__menu-link">Гарантия</a>
+            <a href="#" class="btn slider-services__menu-link">Гарантия</a>
           </li>
           <li class="slider-services__menu-item">
-            <a href="#" class="slider-services__menu-link">Кредит</a>
+            <a href="#" class="btn slider-services__menu-link">Кредит</a>
           </li>
         </ul>
       </div>
       <div class="slider-services__items">
         <section class="slider-services__items-item" id="slider-services_delivery">
-          <h2 class="visually-hidden">Доставка</h2>
-          <b class="slider-services__items-title">Доставка</b>
-          <p class="slider-services__items-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
-            бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          <div class="slider-services__items-container">
+            <h2 class="visually-hidden">Доставка</h2>
+            <b class="slider-services__items-title">Доставка</b>
+            <p class="slider-services__items-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
+              бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </div>
         </section>
         <section class="slider-services__items-item" id="slider-services_guarantee">
-          <h2 class="visually-hidden">Гарантия</h2>
-          <b class="slider-services__items-title">Гарантия</b>
-          <p class="slider-services__items-description">Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-            Товар, не дом, конечно же.</p>
+          <div class="slider-services__items-container">
+            <h2 class="visually-hidden">Гарантия</h2>
+            <b class="slider-services__items-title">Гарантия</b>
+            <p class="slider-services__items-description">Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+              Товар, не дом, конечно же.</p>
+          </div>
         </section>
         <section class="slider-services__items-item" id="slider-services_loan">
-          <h2 class="visually-hidden">Кредит</h2>
-          <b class="slider-services__items-title">Кредит</b>
-          <p class="slider-services__items-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут
-            для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+          <div class="slider-services__items-container">
+            <h2 class="visually-hidden">Кредит</h2>
+            <b class="slider-services__items-title">Кредит</b>
+            <p class="slider-services__items-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут
+              для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+          </div>
         </section>
       </div>
     </div>
@@ -297,9 +303,11 @@
         <p class="company-info__contacts-annotation">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.</p>
         <div class="company-info__contacts-map">
-          <!-- JS Yandex widget -->
+          <a href="#">
+            <img src="img/map.jpg"  width="560" height="222" alt="улица Строителей, 15">
+          </a>
         </div>
-        <button class="btn company-info__contacts-btn">Напишите нам</button>
+        <a class="btn company-info__contacts-btn">Напишите нам</a>
       </section>
     </div>
   </div>
@@ -317,20 +325,16 @@
         <li class="page-footer__menu-item"><a href="#" class="page-footer__menu-link">Контакты</a></li>
       </ul>
       <div class="page-footer__social">
-        <a href="#" class="btn page-footer__social-btn page-footer__social-btn_facebook"></a>
-        <a href="#" class="btn page-footer__social-btn page-footer__social-btn_instagran"></a>
-        <a href="#" class="btn page-footer__social-btn page-footer__social-btn_ftwitter"></a>
+        <a href="#" class="btn page-footer__social-btn page-footer__social-btn_facebook">fb</a>
+        <a href="#" class="btn page-footer__social-btn page-footer__social-btn_instagran">in</a>
+        <a href="#" class="btn page-footer__social-btn page-footer__social-btn_ftwitter">fb</a>
       </div>
-    </div>
-    <div class="page-footer__profile">
-      <ul class="page-footer__profile-list">
-        <li class="page-footer__profile-item">
-          <a href="#" class="page-footer__profile-link page-footer__profile-link_signin">Войти</a>
-        </li>
-      </ul>
     </div>
     <div class="page-footer__actions">
       <ul class="page-footer__actions-list">
+        <li class="page-footer__actions-item">
+          <a href="#" class="page-footer__actions-link">Войти</a>
+        </li>
         <li class="page-footer__actions-item">
           <a href="#" class="page-footer__actions-link">Сравнить</a>
         </li>
