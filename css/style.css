@@ -1,20 +1,37 @@
-/*
-@todo-self:
-- нормально подключить все шрифты и разобрать бардак с жирными/обычными шрифтами
-
-*/
 @font-face {
+    font-weight: bold;
     font-family: "Gilroy ExtraBold";
-    src:
-            url("../fonts/gilroyextrabold.woff2") format("woff2"),
-            url("../fonts/gilroyextrabold.woff") format("woff");
+    font-style: normal;
+
+    src: url("../fonts/gilroyextrabold.woff") format("woff"),
+    url("../fonts/gilroyextrabold.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "Gilroy Light"; /* ? */
-    src:
-            url("../fonts/gilroylight.woff2") format("woff2"),
-            url("../fonts/gilroylight.woff") format("woff");
+    font-weight: lighter;
+    font-family: "Gilroy Light";
+    font-style: normal;
+
+    src: url("../fonts/gilroylight.woff") format("woff"),
+    url("../fonts/gilroylight.woff2") format("woff2");
+}
+
+@font-face {
+    font-weight: normal;
+    font-family: "Open Sans";
+    font-style: normal;
+
+    src: url("../fonts/opensans.woff") format("woff"),
+    url("../fonts/opensans.woff2") format("woff2");;
+}
+
+@font-face {
+    font-weight: lighter;
+    font-family: "Open Sans Light";
+    font-style: normal;
+
+    src: url("../fonts/opensanslight.woff") format("woff"),
+    url("../fonts/opensanslight.woff2") format("woff2");
 }
 
 *, *:before, *:after {
@@ -27,16 +44,22 @@ html {
 
 body {
     width: 1440px;
-    /*
-    Нужно тут центровать так body?
-    */
-    /*margin: 0 auto;*/
 
-    font-family: "Gilroy ExtraBold", sans-serif;
-    font-weight: 100;
-    font-size: 15px;
     line-height: 30px;
-    color: black;
+
+    min-width: 1240px;
+
+    font-weight: normal;
+    font-size: 15px;
+    font-family: "Open Sans Light", "Arial", sans-serif;
+    color: #464646;
+}
+
+h1,
+h2 {
+    font-size: 47px;
+    font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+    color: #000000;
 }
 
 a {
@@ -56,6 +79,11 @@ a {
     width: 1160px;
     margin: 0 auto;
     padding: 0 10px;
+}
+
+.container-slider {
+    width: 1040px;
+    margin: 0 auto;
 }
 
 .page-header-wrapper {
@@ -93,10 +121,14 @@ a {
 .page-header__logo {
     display: block;
     margin-top: -16px;
+    margin-bottom: 18px;
 
+    color: #000000;
+    font-family: "Gilroy ExtraBold","Arial",sans-serif;
     font-size: 48px;
     font-weight: bold;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .page-header__actions {
@@ -108,32 +140,7 @@ a {
 /* Search block */
 .page-header__search {
     width: 479px;
-}
 
-.search-form__field,
-.search-form__send {
-    background-color: #f7e296;
-}
-
-.search-form__field {
-    width: 357px;
-    padding: 10px;
-
-    outline: none;
-    border: none;
-
-    padding-bottom: 14px;
-
-    border-bottom: 2px solid black;
-}
-
-.search-form__field {
-    position: relative;
-
-    padding-left: 40px;
-}
-
-.search-form__control:first-of-type {
     position: relative;
 
     display: inline-block;
@@ -141,7 +148,7 @@ a {
     min-height: 49px;
 }
 
-.search-form__control:first-of-type::before {
+.page-header__search::before {
     position: absolute;
     z-index: 2;
     top: 20px;
@@ -154,11 +161,47 @@ a {
     background: url("../img/search.svg") no-repeat;
 }
 
+.search-form__field,
 .search-form__send {
-    /*display: none;*/
+    background-color: #f7e296;
+}
+
+.search-form__send {
+    cursor: pointer;
+}
+
+/* Show search bar */
+.search-form__field:focus {
+    border-bottom: 2px solid black;
+}
+
+.search-form__field:focus + .search-form__send,
+.search-form__field + .search-form__send:active
+{
+    display: inline-block;
+}
+
+.search-form__field {
+    width: 357px;
+    padding: 10px;
+
+    outline: none;
+    border: none;
+
+    padding-bottom: 14px;
+}
+
+.search-form__field {
+    position: relative;
+
+    padding-left: 40px;
+}
+
+.search-form__send {
+    display: none;
     width: 83px;
     height: 48px;
-    margin-left: -3px;
+    margin-left: -4px;
 
     border: 2px solid black;
 }
@@ -282,30 +325,64 @@ a {
 
     background: linear-gradient(
             to bottom,
-            #ccc 10%, /* для дебага */
-            transparent 10%
+            #ccc 112px,
+            transparent 112px
     );
 }
 
+.slider-promo::before {
+    position: absolute;
+    top: 40px;
+    right: 436px;
+
+    width: 100px;
+    height: 8px;
+
+    content: "";
+    background: white;
+}
+
+.slider-promo__item-photo-container,
+.slider-promo__item-main-content
+{
+    border: 1px solid black;
+}
+
+.slider-promo__item-photo-container {
+    width: 537px;
+    margin: 0;
+    margin-left: 28px;
+    padding: 0;
+}
+
 .slider-promo__item {
+    display: none;
     position: relative;
 
-    display: flex;
+    width: 1040px;
+    margin: 0 auto;
 
     border: 1px solid black;
 }
 
+.slider-promo__item_active {
+    display: flex;
+}
+
 .slider-promo__item::before {
     position: absolute;
-    top: 100px;
-    right: 80px;
+    top: -12px;
+    right: 3px;
 
     width: 168px;
     height: 102px;
 
     content: "00";
     color: white;
-    font-size: 172px;
+    font-family: "Gilroy ExtraBold","Arial",sans-serif;
+    font-size: 180px;
+    line-height: 180px;
+    letter-spacing: 4px;
 }
 
 .slider-promo__item:nth-of-type(1)::before {
@@ -323,31 +400,29 @@ a {
 .slider-promo__item-main-content {
     position: relative;
 
-    width: 500px;
+    width: 510px;
 
-    margin-top: 87px;
-    margin-left: 120px;
+    margin-top: 45px;
+    margin-left: auto;
+    border: 1px solid black;
 }
-
-.slider-promo__item-main-content::before {
-    position: absolute;
-
-    width: 100px;
-    height: 8px;
-
-    content: "";
-    background: white;
-}
-
 
 .slider-promo__item-info-title {
     font-size: 47px;
-    line-height: 1;
+    line-height: 56px;
+    letter-spacing: 1px;
+    word-spacing: .012em;
 }
 
 .slider-promo__item-specification {
     display: flex;
-    justify-content: space-around;
+
+    margin-left: auto;
+}
+
+.slider-promo__item-specification-box:not(:last-of-type) {
+    width: 100px;
+    margin-right: 60px;
 }
 
 .slider-promo__item-specification-value {
@@ -356,17 +431,90 @@ a {
 
 .slider-promo__controls {
     position: absolute;
+    z-index: 2;
     top: 336px;
     right: 149px;
+}
+
+.slider-promo__item-info-btn {
+    min-width: 222px;
+}
+
+/* Slider - label stylization */
+
+label[for^="promo-slide-"] {
+    content: url("../img/radio-off.svg");
+}
+
+/**
+Почему не работают селекторы?
+
+#promo-slide-1:checked ~ .slider-promo__controls label[for="promo-slide-1"],
+#promo-slide-2:checked ~ .slider-promo__controls label[for="promo-slide-2"],
+#promo-slide-3:checked ~ .slider-promo__controls label[for="promo-slide-3"]
+*/
+#promo-slide-1:checked ~ main label[for="promo-slide-1"],
+#promo-slide-2:checked ~ main label[for="promo-slide-2"],
+#promo-slide-3:checked ~ main label[for="promo-slide-3"]
+{
+    content: url("../img/radio-on.svg");
+}
+
+/* Slider - functionality */
+
+/*
+Почему такой вариант не работает? вообще варианты с селекторами кроме main не работают?
+
+#promo-slide-2:checked ~ .slider-promo #test_slide {
+    display: flex;
+}
+*/
+
+#promo-slide-1:checked ~ main .slider-promo__item:nth-of-type(1),
+#promo-slide-2:checked ~ main .slider-promo__item:nth-of-type(2),
+#promo-slide-3:checked ~ main .slider-promo__item:nth-of-type(3)
+{
+    display: flex;
 }
 
 /* Categories */
 
 .categories {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     margin-bottom: 89px;
+}
+
+.categories__box {
+    width: 160px;
+}
+
+.categories__box-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 160px;
+    height: 160px;
+    margin-bottom: 32px;
+
+    background: #f7e296;
+}
+
+.categories__box-container:hover .categories__box-image,
+.categories__box-container:active .categories__box-image
+{
+    background-color: #f0c52e;
+}
+
+.categories__box-container:active .categories__box-image {
+
+    opacity: 0.3;
+}
+
+.categories__box-container:active {
+    color: gray;
 }
 
 /* Slider - Services */
@@ -439,20 +587,33 @@ a {
 /* Components */
 .btn {
     position: relative;
-    min-height: 41px;
-    min-width: 162px;
+    display: inline-block;
 
-    border: 1px solid black;
+    vertical-align: top;
+    padding: 9px 5px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: black;
+    font-size: 18px;
+    font-family: "Gilroy ExtraBold","Arial",sans-serif;
+    text-align: center;
 }
 
-.btn::after {
+.btn::before {
     position: absolute;
     z-index: -1;
-    top: 10px;
+    top: 40%;
     left: 0;
-
-    width: 128%;
-
     content: "";
-    box-shadow: -10px 0 0 4px #f0c52e;
+    background: #f0c52e;
+    width: 100%;
+    height: 20%;
+}
+
+.btn:hover::before {
+    top: 0;
+    height: 100%;
+    transition: all .2s ease-in-out;
 }
