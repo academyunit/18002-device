@@ -37,6 +37,8 @@
 /* Safe inheritance */
 *, *:before, *:after {
     box-sizing: inherit;
+
+    /*outline: 1px dashed black;*/
 }
 
 html {
@@ -73,7 +75,10 @@ a:hover {
     opacity: 0.6;
 }
 
-.visually-hidden {
+.visually-hidden,
+input[type="radio"],
+input[type="checkbox"]
+{
     position: absolute;
     overflow: hidden;
     clip: rect(0 0 0 0);
@@ -293,34 +298,58 @@ Global site Header block
     letter-spacing: 4px;
 }
 
+.page-header__nav-link-catalog:hover + .page-header__nav-goods__container,
+.page-header__nav-goods__container:hover
+{
+    display: block;
+}
+
+.page-header__nav-goods__container {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 23px;
+    left: -61px;
+    
+    width: 1161px;
+    min-height: 177px;
+
+    background: #f7e296;
+
+    /*outline: 1px dashed green;*/
+}
+
 /* Header - Подменю в разделе "Каталог товаров" */
 .page-header__nav-goods {
     position: absolute;
     z-index: 2;
+    left: 61px;
 
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
 
-    width: 600px;
+    max-width: 600px;
     margin: 0;
     padding: 0;
 
     list-style: none;
 
-    /* for debugging */
-    background: rgba(255,0,0,0.2);
+    background: #f7e296;
+
+    /*outline: 1px dashed blue;*/
 }
 
 .page-header__nav-goods-item {
     width: 200px;
 }
 
-/*
-    Хак ждя "Каталог товаров - умные часа"
-    Можно ли так делать? Или лучше создать 3 раздельных ненумерованных списка и положить туда ве элементы?
-*/
-.page-header__nav-goods-item:nth-of-type(5) {
-    width: 400px;
+.page-header__nav-goods-item:not(:first-child):not(:nth-child(4n)):not(:last-child) a {
+    margin-left: 40px;
+}
+
+.page-header__nav-goods-item:last-child {
+    flex-basis: 100%;
 }
 
 /***
@@ -447,7 +476,7 @@ index.html page styles
 
     background: linear-gradient(
             to bottom,
-            #ccc 112px,
+            #f7e296 112px,
             transparent 112px
     );
 }
@@ -467,7 +496,7 @@ index.html page styles
 .slider-promo__item-photo-container,
 .slider-promo__item-main-content
 {
-    border: 1px solid black;
+    /*outline: 1px dashed saddlebrown;*/
 }
 
 .slider-promo__item-photo-container {
@@ -484,7 +513,14 @@ index.html page styles
     width: 1040px;
     margin: 0 auto;
 
-    border: 1px solid black;
+    /*outline: 1px dashed orange;*/
+}
+
+.slider-promo__item-container {
+    margin: 0;
+    margin-left: -22px;;
+    padding: 0;
+    width: 533px;
 }
 
 .slider-promo__item_active {
@@ -519,6 +555,12 @@ index.html page styles
     content: "03";
 }
 
+.slider-promo__item:nth-of-type(2)::before,
+.slider-promo__item:nth-of-type(3)::before
+{
+    right: 34px;
+}
+
 .slider-promo__item-main-content {
     position: relative;
 
@@ -526,7 +568,8 @@ index.html page styles
 
     margin-top: 45px;
     margin-left: auto;
-    border: 1px solid black;
+
+    /*outline: 1px dashed black;*/
 }
 
 .slider-promo__item-info-title {
@@ -693,17 +736,15 @@ label[for^="promo-slide-"] {
 }
 
 .slider-services__items-item:nth-of-type(1) {
-    display: block;
+    display: block; /* remove it from here */
     background-image: url("../img/delivery.svg");
 }
 
 .slider-services__items-item:nth-of-type(2) {
-    /*display: block;*/
     background-image: url("../img/warranty.svg");
 }
 
 .slider-services__items-item:nth-of-type(3) {
-    /*display: block;*/
     background-image: url("../img/credit.svg");
 }
 
@@ -895,11 +936,60 @@ catalog.html page styles
 
 /* Catalog items - mask functionality */
 
-
 .products__items-item-buy-btn,
 .products__items-item-compare
 {
     display: block;
+}
+
+.modal-feedback {
+    padding: 100px;
+}
+
+.modal-feedback__wrapper {
+    width: 760px;
+}
+
+.modal-feedback__user-data {
+    display: flex;
+}
+
+.modal-feedback__user-data .modal-feedback__user-data-label:nth-of-type(2) {
+    margin-left: 40px;
+}
+
+.modal-feedback__message {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    width: 760px;
+    height: 155px;
+}
+
+.modal-feedback__message-input {
+    width: 100%;
+    height: 155px;
+}
+
+.modal-feedback__user-data-label,
+.modal-feedback__user-data-label,
+.modal-feedback__message-label {
+    font-size: 18px;
+    line-height: 18px;
+    font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+}
+
+.modal-feedback__user-data-input,
+.modal-feedback__message-input
+{
+    margin-top: 13px;
+}
+
+.modal-map {
+    min-height: 558px;
+}
+
+.modal-map__close {
+    opacity: 0.5;
 }
 
 /***
@@ -909,37 +999,78 @@ Shared components
 ***/
 
 /* Buttons/Links */
-.btn {
+
+.btn-device {
     position: relative;
+
     display: inline-block;
+    padding-top: 9px;
+    padding-right: 5px;
+    padding-bottom: 9px;
+    padding-left: 5px;
 
-    vertical-align: top;
-    padding: 9px 5px;
-
-    text-decoration: none;
-    text-transform: uppercase;
-
-    color: black;
     font-size: 18px;
-    font-family: "Gilroy ExtraBold","Arial",sans-serif;
+    font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+    vertical-align: top;
     text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3.6px;
 }
 
-.btn::before {
+.btn-device:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-device::before {
+    content: "";
     position: absolute;
-    z-index: -1;
     top: 40%;
     left: 0;
-    content: "";
-    background: #f0c52e;
+    z-index: -1;
+
     width: 100%;
     height: 20%;
+
+    background-color: #f0c52e;
+
+    transition: all 0.2s ease-in-out;
 }
 
-.btn:hover::before {
+.btn-device:hover::before {
     top: 0;
+
     height: 100%;
-    transition: all .2s ease-in-out;
+}
+
+/* Input (text) */
+
+input[type="text"],
+textarea {
+    width: 360px;
+    padding: 20px;
+    border: none;
+
+    color: #bababa;
+    background: #f2f2f2;
+}
+
+input[type="text"]:hover,
+textarea:hover {
+    background: #eaeaea;
+}
+
+input[type="text"]:focus,
+textarea:focus
+{
+    border: 2px solid #f7e296;
+}
+
+input[type="text"]:invalid,
+textarea:invalid
+{
+    background: #f6dada;
 }
 
 /* Breadcrumbs */
@@ -967,4 +1098,75 @@ Shared components
 
 .pagination__item {
     display: inline-block;
+}
+
+/* Modal Window */
+
+.modal-window {
+    display: none;
+
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+
+    min-width: 964px;
+    min-height: 275px;
+    background: white;
+
+    transform: translate(-50%, -50%);
+
+    box-shadow:
+            -40px 0 40px -40px rgba(2, 4, 6, 0.75),
+            40px 0 40px -40px rgba(2, 4, 6, 0.75),
+            0 8px 20px 2px rgba(2, 4, 6, 0.2)
+
+;
+}
+
+.modal-window_show {
+    display: block;
+}
+
+.modal-window__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 65px;
+    height: 65px;
+    background: #f0c52e;
+    border: none;
+    border-radius: 50%;
+    text-indent: -9999px;
+
+    cursor: pointer;
+}
+
+.modal-window__close::after,
+.modal-window__close::before
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+
+    width: 32px;
+    height: 2px;
+
+    content: "";
+    background: white;
+}
+
+.modal-window__close::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal-window__close::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-window__close:hover,
+.modal-window__close:hover {
+    opacity: 0.7;
 }
