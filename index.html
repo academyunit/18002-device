@@ -7,12 +7,9 @@
   <title>HTML Academy: Девайс</title>
 </head>
 <body>
-<input class="slider-promo__controls-control" id="promo-slide-1" type="radio" name="promo-slide" checked>
-<input class="slider-promo__controls-control" id="promo-slide-2" type="radio" name="promo-slide">
-<input class="slider-promo__controls-control" id="promo-slide-3" type="radio" name="promo-slide">
 <header class="page-header container">
   <div class="page-header-wrapper">
-    <a href="index.html" class="logotype page-header__logo">Device</a>
+    <h1 class="page-header__logo">Device</h1>
     <div class="page-header__actions">
       <form action="/" class="search-form page-header__search">
         <input type="search" class="search-form__field" placeholder="Поиск по сайту">
@@ -20,44 +17,42 @@
       </form>
       <ul class="page-header__profile">
         <li class="page-header__profile-item">
-          <a href="" class="page-header__profile-link page-header__profile-link_signin">Войти</a>
+          <a href="" class="page-header__profile-link page-header__profile-link_sign-in">Войти</a>
         </li>
       </ul>
       <ul class="page-header__options">
         <li class="page-header__options-item">
-          <a href="#" class="page-header__options-link">Сравнить</a>
+          <a href="#" class="page-header__options-link page-header__options-link_compare">Сравнить</a>
         </li>
         <li class="page-header__options-item">
-          <a href="#" class="page-header__options-link">Корзина</a>
+          <a href="#" class="page-header__options-link page-header__options-link_cart">Корзина</a>
         </li>
       </ul>
     </div>
     <nav class="page-header__nav">
       <ul class="page-header__nav-list">
         <li class="page-header__nav-item">
-          <a href="catalog.html" class="page-header__nav-link page-header__nav-link-catalog">Каталог товаров</a>
-          <div class="page-header__nav-goods__container">
-            <ul class="page-header__nav-goods">
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Фитнесс-браслеты</a>
-              </li>
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Квадрокоптеры</a>
-              </li>
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Моноподы для селфи</a>
-              </li>
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Умные часы</a>
-              </li>
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Экшн-камеры</a>
-              </li>
-            </ul>
-          </div>
+          <a href="catalog.html" class="page-header__nav-link">Каталог товаров</a>
+          <ul class="page-header__nav-goods">
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Фитнесс-браслеты</a>
+            </li>
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Квадрокоптеры</a>
+            </li>
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Моноподы для селфи</a>
+            </li>
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Умные часы</a>
+            </li>
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Экшн-камеры</a>
+            </li>
+          </ul>
         </li>
         <li class="page-header__nav-item">
           <a href="#" class="page-header__nav-link">Доставка</a>
@@ -74,20 +69,24 @@
 </header>
 <main>
   <section class="slider-promo container">
+    <input class="slider-promo__controls-control" id="promo-slide-1" type="radio" name="promo-slide" checked>
+    <input class="slider-promo__controls-control" id="promo-slide-2" type="radio" name="promo-slide">
+    <input class="slider-promo__controls-control" id="promo-slide-3" type="radio" name="promo-slide">
     <div class="slider-promo__controls">
-      <label for="promo-slide-1"></label>
-      <label for="promo-slide-2"></label>
-      <label for="promo-slide-3"></label>
+      <label class="slider-promo__controls-label" for="promo-slide-1"></label>
+      <label class="slider-promo__controls-label" for="promo-slide-2"></label>
+      <label class="slider-promo__controls-label" for="promo-slide-3"></label>
     </div>
     <h2 class="visually-hidden">Лучшие товары 2017!</h2>
-    <article class="slider-promo__item">
+    <div class="slider-promo-container">
+      <article class="slider-promo__item">
         <h2 class="visually-hidden">Самая длинная селфи палка</h2>
         <figure class="slider-promo__item-photo-container">
           <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи" class="slider-promo__item-photo">
         </figure>
         <div class="slider-promo__item-main-content">
           <section class="slider-promo__item-info">
-            <h2 class="slider-promo__item-info-title">Делай селфи,
+            <h2 class="slider-promo__item-info-title">Делай селфи,<br>
               как Бен Стиллер!</h2>
             <p class="slider-promo__item-info-description">
               Самая длинная палка для селфи доступна в нашем магазине.
@@ -110,57 +109,57 @@
             </div>
           </div>
         </div>
-    </article>
-    <article class="slider-promo__item">
-      <h2 class="visually-hidden">Мотивирующие фитнес-браслеты</h2>
-      <figure class="slider-promo__item-photo-container">
-        <img src="img/slider-2.png" width="345" height="485" alt="Мотивирующие фитнеc-браслеты" class="slider-promo__item-photo">
-      </figure>
-      <div class="slider-promo__item-main-content">
-        <section class="slider-promo__item-info">
-          <h2 class="slider-promo__item-info-title">Худеем
-            правильно!</h2>
-          <p class="slider-promo__item-info-description">
-            Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
-            занятия и соблюдать диету.
-          </p>
-          <a href="#" class="btn-device slider-promo__item-info-btn">Подробнее</a>
-        </section>
-        <div class="slider-promo__item-specification">
-          <div class="slider-promo__item-specification-box">
-            <p class="slider-promo__item-specification-value">48 часов</p>
-            <p class="slider-promo__item-specification-name">Без подзарядки</p>
+      </article>
+      <article class="slider-promo__item">
+        <h2 class="visually-hidden">Мотивирующие фитнес-браслеты</h2>
+        <figure class="slider-promo__item-photo-container">
+          <img src="img/slider-2.png" width="345" height="485" alt="Мотивирующие фитнеc-браслеты" class="slider-promo__item-photo">
+        </figure>
+        <div class="slider-promo__item-main-content">
+          <section class="slider-promo__item-info">
+            <h2 class="slider-promo__item-info-title">Худеем <br>правильно!</h2>
+            <p class="slider-promo__item-info-description">
+              Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
+              занятия и соблюдать диету.
+            </p>
+            <a href="#" class="btn-device slider-promo__item-info-btn">Подробнее</a>
+          </section>
+          <div class="slider-promo__item-specification">
+            <div class="slider-promo__item-specification-box">
+              <p class="slider-promo__item-specification-value">48 часов</p>
+              <p class="slider-promo__item-specification-name">Без подзарядки</p>
+            </div>
           </div>
         </div>
-      </div>
-    </article>
-    <article class="slider-promo__item">
-      <h2 class="visually-hidden">Квадрокоптер</h2>
-      <figure class="slider-promo__item-container">
-        <img src="img/slider-3.png" width="526" height="334" alt="обычный, на первый взгляд, квадрокоптер" class="slider-promo__item-photo">
-      </figure>
-      <div class="slider-promo__item-main-content">
-        <section class="slider-promo__item-info">
-          <h2 class="slider-promo__item-info-title">Порхает как бабочка,
-            жалит как пчела!</h2>
-          <p class="slider-promo__item-info-description">
-            Этот обычный, на первый взгляд, квадрокоптер оснащен
-            мощным лазером, замаскированным под стандартную камеру.
-          </p>
-          <a href="#" class="btn-device slider-promo__item-info-btn">Подробнее</a>
-        </section>
-        <div class="slider-promo__item-specification">
-          <div class="slider-promo__item-specification-box">
-            <p class="slider-promo__item-specification-value">800 м</p>
-            <p class="slider-promo__item-specification-name">Дальность полета</p>
-          </div>
-          <div class="slider-promo__item-specification-box">
-            <p class="slider-promo__item-specification-value">50 м</p>
-            <p class="slider-promo__item-specification-name">Радиус поражения</p>
+      </article>
+      <article class="slider-promo__item">
+        <h2 class="visually-hidden">Квадрокоптер</h2>
+        <figure class="slider-promo__item-container">
+          <img src="img/slider-3.png" width="526" height="334" alt="обычный, на первый взгляд, квадрокоптер" class="slider-promo__item-photo">
+        </figure>
+        <div class="slider-promo__item-main-content">
+          <section class="slider-promo__item-info">
+            <h2 class="slider-promo__item-info-title">Порхает как бабочка,
+              жалит как пчела!</h2>
+            <p class="slider-promo__item-info-description">
+              Этот обычный, на первый взгляд, квадрокоптер оснащен
+              мощным лазером, замаскированным под стандартную камеру.
+            </p>
+            <a href="#" class="btn-device slider-promo__item-info-btn">Подробнее</a>
+          </section>
+          <div class="slider-promo__item-specification">
+            <div class="slider-promo__item-specification-box">
+              <p class="slider-promo__item-specification-value">800 м</p>
+              <p class="slider-promo__item-specification-name">Дальность полета</p>
+            </div>
+            <div class="slider-promo__item-specification-box">
+              <p class="slider-promo__item-specification-value">50 м</p>
+              <p class="slider-promo__item-specification-name">Радиус поражения</p>
+            </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   </section>
   <div class="container">
     <section class="categories">
@@ -168,7 +167,7 @@
       <article class="categories__box">
         <a href="#" class="categories__box-container">
           <div class="categories__box-image">
-            <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
+            <img class="categories__box-photo" src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
           </div>
           <h3 class="categories__box-title">Виртуальная реальность</h3>
         </a>
@@ -176,7 +175,7 @@
       <article class="categories__box">
         <a href="#" class="categories__box-container">
           <div class="categories__box-image">
-            <img src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
+            <img class="categories__box-photo" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
           </div>
           <h3 class="categories__box-title">Моноподы для селфи</h3>
         </a>
@@ -184,7 +183,7 @@
       <article class="categories__box">
         <a href="#" class="categories__box-container">
           <div class="categories__box-image">
-            <img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
+            <img class="categories__box-photo" src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
           </div>
           <h3 class="categories__box-title">Экшн-камеры</h3>
         </a>
@@ -192,7 +191,7 @@
       <article class="categories__box">
         <a href="#" class="categories__box-container">
           <div class="categories__box-image">
-            <img src="img/popular-4.svg" width="108" height="61" alt="Фитнес браслеты">
+            <img class="categories__box-photo" src="img/popular-4.svg" width="108" height="61" alt="Фитнес браслеты">
           </div>
           <h3 class="categories__box-title">Фитнес браслеты</h3>
         </a>
@@ -200,7 +199,7 @@
       <article class="categories__box">
         <a href="#" class="categories__box-container">
           <div class="categories__box-image">
-            <img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
+            <img class="categories__box-photo" src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
           </div>
           <h3 class="categories__box-title">Умные часы</h3>
         </a>
@@ -208,7 +207,7 @@
       <article class="categories__box">
         <a href="#" class="categories__box-container">
           <div class="categories__box-image">
-            <img src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
+            <img class="categories__box-photo" src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
           </div>
           <h3 class="categories__box-title">Квадрокоптеры</h3>
         </a>
@@ -218,16 +217,19 @@
   <section class="slider-services">
     <h2 class="visually-hidden">Условия покупки</h2>
     <div class="container">
+      <input class="slider-services__control" type="radio" name="slider-services__control" id="slider-services__menu-item-delivery" checked>
+      <input class="slider-services__control" type="radio" name="slider-services__control" id="slider-services__menu-item-warranty">
+      <input class="slider-services__control" type="radio" name="slider-services__control" id="slider-services__menu-item-credit">
       <div class="slider-services__menu">
         <ul class="slider-services__menu-list">
           <li class="slider-services__menu-item">
-            <a href="#" class="btn-device slider-services__menu-link">Доставка</a>
+            <label class="btn-device slider-services__menu-link" for="slider-services__menu-item-delivery">Доставка</label>
           </li>
           <li class="slider-services__menu-item">
-            <a href="#" class="btn-device slider-services__menu-link">Гарантия</a>
+            <label class="btn-device slider-services__menu-link" for="slider-services__menu-item-warranty">Гарантия</label>
           </li>
           <li class="slider-services__menu-item">
-            <a href="#" class="btn-device slider-services__menu-link">Кредит</a>
+            <label class="btn-device slider-services__menu-link" for="slider-services__menu-item-credit">Кредит</label>
           </li>
         </ul>
       </div>
@@ -240,7 +242,7 @@
               бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </div>
         </section>
-        <section class="slider-services__items-item" id="slider-services_guarantee">
+        <section class="slider-services__items-item" id="slider-services_warranty">
           <div class="slider-services__items-container">
             <h2 class="visually-hidden">Гарантия</h2>
             <b class="slider-services__items-title">Гарантия</b>
@@ -248,7 +250,7 @@
               Товар, не дом, конечно же.</p>
           </div>
         </section>
-        <section class="slider-services__items-item" id="slider-services_loan">
+        <section class="slider-services__items-item" id="slider-services_credit">
           <div class="slider-services__items-container">
             <h2 class="visually-hidden">Кредит</h2>
             <b class="slider-services__items-title">Кредит</b>
@@ -265,22 +267,26 @@
       <ul class="brands__list">
         <li class="brands__list-item">
           <a href="#" class="brands__list-link">
-            <img src="img/brands-1.jpg" width="260" height="100" alt="Dji">
+            <img class="brands__list-image" src="img/brands-1.jpg" width="260" height="100" alt="Dji">
+            <img class="brands__list-image-cover" src="img/brands-1_cover.jpg" width="260" height="100"  alt="Dji">
           </a>
         </li>
         <li class="brands__list-item">
           <a href="#" class="brands__list-link">
-            <img src="img/brands-2.jpg" width="260" height="100" alt="SPGadgets">
+            <img class="brands__list-image" src="img/brands-2.jpg" width="260" height="100" alt="SPGadgets">
+            <img class="brands__list-image-cover" src="img/brands-2_cover.jpg" width="260" height="100"  alt="Dji">
           </a>
         </li>
         <li class="brands__list-item">
           <a href="#" class="brands__list-link">
-            <img src="img/brands-3.jpg" width="260" height="100" alt="GoPro">
+            <img class="brands__list-image" src="img/brands-3.jpg" width="260" height="100" alt="GoPro">
+            <img class="brands__list-image-cover" src="img/brands-3_cover.jpg" width="260" height="100"  alt="Dji">
           </a>
         </li>
         <li class="brands__list-item">
           <a href="#" class="brands__list-link">
-            <img src="img/brands-4.jpg" width="260" height="100" alt="VIVE">
+            <img class="brands__list-image" src="img/brands-4.jpg" width="260" height="100" alt="VIVE">
+            <img class="brands__list-image-cover" src="img/brands-4_cover.jpg" width="260" height="100"  alt="Dji">
           </a>
         </li>
       </ul>
@@ -289,8 +295,8 @@
       <section class="company-info__about">
         <h2 class="company-info__about-title">О нас</h2>
         <div class="company-info__about-description">
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
+          <p class="company-info__about-description-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p class="company-info__about-description-text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
             компаниями:</p>
         </div>
         <ul class="company-info__about-list">
@@ -327,28 +333,30 @@
         <li class="page-footer__menu-item"><a href="#" class="page-footer__menu-link">Контакты</a></li>
       </ul>
       <div class="page-footer__social">
-        <a href="#" class="btn-device page-footer__social-btn page-footer__social-btn_facebook">fb</a>
-        <a href="#" class="btn-device page-footer__social-btn page-footer__social-btn_instagran">in</a>
-        <a href="#" class="btn-device page-footer__social-btn page-footer__social-btn_ftwitter">fb</a>
+        <a class="social-btn page-footer__social-btn_facebook" href="#">Facebook</a>
+        <a class="social-btn page-footer__social-btn_instagram" href="#">Instagram</a>
+        <a class="social-btn page-footer__social-btn_twitter" href="#">Twitter</a>
       </div>
     </div>
     <div class="page-footer__actions">
       <ul class="page-footer__actions-list">
         <li class="page-footer__actions-item">
-          <a href="#" class="page-footer__actions-link">Войти</a>
+          <a href="#" class="page-footer__actions-link page-footer__actions-link_sign-in">Войти</a>
         </li>
         <li class="page-footer__actions-item">
-          <a href="#" class="page-footer__actions-link">Сравнить</a>
+          <a href="#" class="page-footer__actions-link page-footer__actions-link_compare">Сравнить</a>
         </li>
         <li class="page-footer__actions-item">
-          <a href="#" class="page-footer__actions-link">Корзина</a>
+          <a href="#" class="page-footer__actions-link page-footer__actions-link_cart">Корзина</a>
         </li>
       </ul>
       <address class="page-footer__actions-contacts">
         Тел.: +7 (495) 495-95-95
       </address>
       <div class="page-footer__copyright">
-        <a href="#"><img src="img/logo-html.png" width="27" height="35" alt="HTMLAcademy"></a>
+        <a class="page-footer__copyright-link" href="#">
+          <img class="page-footer__copyright-image" src="img/logo-html.png" width="27" height="35" alt="HTMLAcademy">
+        </a>
       </div>
     </div>
   </div>
@@ -385,7 +393,7 @@
     <p class="modal-map__container-map-no-js">
       <img src="img/map.jpg" width="100%" height="100%" alt="Наш офис по адресу ул. Хуббы-буббы дом 1 ОАО 'Академия ХТМЛ'">
     </p>
-    <div class="map" id="yandex-map"></div>
+    <div class="modal-map__yandex-map" id="yandex-map"></div>
   </div>
 </section>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>

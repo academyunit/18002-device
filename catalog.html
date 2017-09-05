@@ -9,7 +9,7 @@
 <body>
 <header class="page-header container">
   <div class="page-header-wrapper">
-    <a href="index.html" class="logotype page-header__logo">Device</a>
+    <h1 class="page-header__logo">Device</h1>
     <div class="page-header__actions">
       <form action="/" class="search-form page-header__search">
         <input type="search" class="search-form__field" placeholder="Поиск по сайту">
@@ -17,44 +17,42 @@
       </form>
       <ul class="page-header__profile">
         <li class="page-header__profile-item">
-          <a href="" class="page-header__profile-link page-header__profile-link_signin">Войти</a>
+          <a href="" class="page-header__profile-link page-header__profile-link_sign-in">Войти</a>
         </li>
       </ul>
       <ul class="page-header__options">
         <li class="page-header__options-item">
-          <a href="#" class="page-header__options-link">Сравнить</a>
+          <a href="#" class="page-header__options-link page-header__options-link_compare">Сравнить</a>
         </li>
         <li class="page-header__options-item">
-          <a href="#" class="page-header__options-link">Корзина</a>
+          <a href="#" class="page-header__options-link page-header__options-link_cart">Корзина</a>
         </li>
       </ul>
     </div>
     <nav class="page-header__nav">
       <ul class="page-header__nav-list">
         <li class="page-header__nav-item">
-          <a href="catalog.html" class="page-header__nav-link page-header__nav-link-catalog">Каталог товаров</a>
-          <div class="page-header__nav-goods__container">
-            <ul class="page-header__nav-goods">
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Фитнесс-браслеты</a>
-              </li>
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Квадрокоптеры</a>
-              </li>
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Моноподы для селфи</a>
-              </li>
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Умные часы</a>
-              </li>
-              <li class="page-header__nav-goods-item">
-                <a class="page-header__nav-goods-link" href="#">Экшн-камеры</a>
-              </li>
-            </ul>
-          </div>
+          <a href="catalog.html" class="page-header__nav-link">Каталог товаров</a>
+          <ul class="page-header__nav-goods">
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Фитнесс-браслеты</a>
+            </li>
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Квадрокоптеры</a>
+            </li>
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Моноподы для селфи</a>
+            </li>
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Умные часы</a>
+            </li>
+            <li class="page-header__nav-goods-item">
+              <a class="page-header__nav-goods-link" href="#">Экшн-камеры</a>
+            </li>
+          </ul>
         </li>
         <li class="page-header__nav-item">
           <a href="#" class="page-header__nav-link">Доставка</a>
@@ -93,8 +91,8 @@
             <li class="products__sort-list-item"><a href="#" class="products__sort-list-link">По популярности</a></li>
           </ul>
           <div class="products__sort-type">
-            <a href="#" class="products__sort-up">U</a>
-            <a href="#" class="products__sort-down">D</a>
+            <a href="#" class="products__sort-type-icon products__sort-up">Сортировка по возрастанию</a>
+            <a href="#" class="products__sort-type-icon products__sort-down">Сортировка по убыванию</a>
           </div>
         </section>
       </div>
@@ -104,27 +102,25 @@
         <section class="products__items-filter">
           <h2 class="visually-hidden">Подбор товаров по критериям</h2>
           <form action="#">
-            <fieldset>
-              <legend class="form-legend">Стоимость</legend>
+            <fieldset class="products__items-filter-container">
+              <legend class="products__items-filter-title">Стоимость</legend>
               <div class="range-control">
                 <div class="range-control__scale">
                   <div class="range-control__scale-bar"></div>
                 </div>
                 <div class="range-control__toggle range-control__toggle_min"></div>
                 <div class="range-control__toggle range-control__toggle_max"></div>
-                <div class="range-control__selected-price">
-                  <label for="range-control__selected-price-min">от</label>
-                  <input class="range-control__selected-price-min" id="range-control__selected-price-min" type="text" value="0">
-                  <label for="range-control__selected-price-max">до</label>
-                  <input type="text" class="range-control__selected-price-max" id="range-control__selected-price-max" value="5000">
-                </div>
+              </div>
+              <div class="range-control__selected-price">
+                <input class="range-control__selected-price-min" type="text" name="min" id="min" placeholder="От 0">
+                <input class="range-control__selected-price-max" type="text" name="max" id="max" placeholder="От 5000">
               </div>
             </fieldset>
-            <fieldset>
-              <legend class="form-legend">Цвет</legend>
+            <fieldset class="products__items-filter-container">
+              <legend class="products__items-filter-title">Цвет</legend>
               <ul class="products__items-filter-colors">
                 <li class="products__items-filter-color">
-                  <input class="visually-hidden products__items-filter-color-input" id="color_1" type="checkbox" name="filter_color_1">
+                  <input class="visually-hidden products__items-filter-color-input" id="color_1" type="checkbox" name="filter_color_1" checked>
                   <label class="products__items-filter-color-label" for="color_1">Черный</label>
                 </li>
                 <li class="products__items-filter-color">
@@ -132,11 +128,11 @@
                   <label class="products__items-filter-color-label" for="color_2">Белый</label>
                 </li>
                 <li class="products__items-filter-color">
-                  <input class="visually-hidden products__items-filter-color-input" id="color_3" type="checkbox" name="filter_color_3">
+                  <input class="visually-hidden products__items-filter-color-input" id="color_3" type="checkbox" name="filter_color_3" checked>
                   <label class="products__items-filter-color-label" for="color_3">Синий</label>
                 </li>
                 <li class="products__items-filter-color">
-                  <input class="visually-hidden products__items-filter-color-input" id="color_4" type="checkbox" name="filter_color_4">
+                  <input class="visually-hidden products__items-filter-color-input" id="color_4" type="checkbox" name="filter_color_4" checked>
                   <label class="products__items-filter-color-label" for="color_4">Красный</label>
                 </li>
                 <li class="products__items-filter-color">
@@ -145,18 +141,18 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend class="form-legend">Bluetooth</legend>
+            <fieldset class="products__items-filter-container">
+              <legend class="products__items-filter-title">Bluetooth</legend>
               <div class="form-control">
-                <input type="radio" name="bluetooth" id="bluetooth_1">
-                <label for="bluetooth_1">Есть</label>
+                <input class="visually-hidden products__items-filter-bluetooth-input" type="radio" name="bluetooth" id="bluetooth_1" checked>
+                <label class="products__items-filter-bluetooth-label" for="bluetooth_1">Есть</label>
               </div>
               <div class="form-control">
-                <input type="radio" name="bluetooth" id="bluetooth_0">
-                <label for="bluetooth_0">Нет</label>
+                <input class="visually-hidden products__items-filter-bluetooth-input" type="radio" name="bluetooth" id="bluetooth_0">
+                <label class="products__items-filter-bluetooth-label" for="bluetooth_0">Нет</label>
               </div>
             </fieldset>
-            <button class="btn products__items-filter-btn">Показать</button>
+            <button class="btn-device products__items-filter-btn">Показать</button>
           </form>
         </section>
         <section class="products__items-container">
@@ -170,11 +166,9 @@
                 <span class="products__items-item-price">500 руб.</span>
               </figcaption>
             </figure>
-            <div class="products__items-item-mask products__items-item-mask_show">
-              <div class="products__items-item-controls">
-                <a href="#" class="btn products__items-item-buy-btn">В корзину</a>
-                <a href="#" class="products__items-item-compare">Добавить к сравнению</a>
-              </div>
+            <div class="products__items-item-controls">
+              <a href="#" class="btn-device products__items-item-buy-btn">В корзину</a>
+              <a href="#" class="products__items-item-compare">Добавить к сравнению</a>
             </div>
           </article>
           <article class="products__items-item">
@@ -186,11 +180,9 @@
                 <span class="products__items-item-price">1 500 руб.</span>
               </figcaption>
             </figure>
-            <div class="products__items-item-mask">
-              <div class="products__items-item-controls">
-                <a href="#" class="btn products__items-item-buy-btn">В корзину</a>
-                <a href="#" class="products__items-item-compare">Добавить к сравнению</a>
-              </div>
+            <div class="products__items-item-controls">
+              <a href="#" class="btn-device products__items-item-buy-btn">В корзину</a>
+              <a href="#" class="products__items-item-compare">Добавить к сравнению</a>
             </div>
           </article>
           <article class="products__items-item">
@@ -202,11 +194,9 @@
                 <span class="products__items-item-price">2 500 руб.</span>
               </figcaption>
             </figure>
-            <div class="products__items-item-mask">
-              <div class="products__items-item-controls">
-                <a href="#" class="btn products__items-item-buy-btn">В корзину</a>
-                <a href="#" class="products__items-item-compare">Добавить к сравнению</a>
-              </div>
+            <div class="products__items-item-controls">
+              <a href="#" class="btn-device products__items-item-buy-btn">В корзину</a>
+              <a href="#" class="products__items-item-compare">Добавить к сравнению</a>
             </div>
           </article>
           <article class="products__items-item products__items-item_new">
@@ -218,11 +208,9 @@
                 <span class="products__items-item-price">4 900 руб.</span>
               </figcaption>
             </figure>
-            <div class="products__items-item-mask">
-              <div class="products__items-item-controls">
-                <a href="#" class="btn products__items-item-buy-btn">В корзину</a>
-                <a href="#" class="products__items-item-compare">Добавить к сравнению</a>
-              </div>
+            <div class="products__items-item-controls">
+              <a href="#" class="btn-device products__items-item-buy-btn">В корзину</a>
+              <a href="#" class="products__items-item-compare">Добавить к сравнению</a>
             </div>
           </article>
           <section class="pagination">
@@ -263,32 +251,33 @@
         <li class="page-footer__menu-item"><a href="#" class="page-footer__menu-link">Контакты</a></li>
       </ul>
       <div class="page-footer__social">
-        <a href="#" class="btn-device page-footer__social-btn page-footer__social-btn_facebook">fb</a>
-        <a href="#" class="btn-device page-footer__social-btn page-footer__social-btn_instagran">in</a>
-        <a href="#" class="btn-device page-footer__social-btn page-footer__social-btn_ftwitter">fb</a>
+        <a class="social-btn page-footer__social-btn_facebook" href="#">Facebook</a>
+        <a class="social-btn page-footer__social-btn_instagram" href="#">Instagram</a>
+        <a class="social-btn page-footer__social-btn_twitter" href="#">Twitter</a>
       </div>
     </div>
     <div class="page-footer__actions">
       <ul class="page-footer__actions-list">
         <li class="page-footer__actions-item">
-          <a href="#" class="page-footer__actions-link">Войти</a>
+          <a href="#" class="page-footer__actions-link page-footer__actions-link_sign-in">Войти</a>
         </li>
         <li class="page-footer__actions-item">
-          <a href="#" class="page-footer__actions-link">Сравнить</a>
+          <a href="#" class="page-footer__actions-link page-footer__actions-link_compare">Сравнить</a>
         </li>
         <li class="page-footer__actions-item">
-          <a href="#" class="page-footer__actions-link">Корзина</a>
+          <a href="#" class="page-footer__actions-link page-footer__actions-link_cart">Корзина</a>
         </li>
       </ul>
       <address class="page-footer__actions-contacts">
         Тел.: +7 (495) 495-95-95
       </address>
       <div class="page-footer__copyright">
-        <a href="#"><img src="img/logo-html.png" width="27" height="35" alt="HTMLAcademy"></a>
+        <a class="page-footer__copyright-link" href="#">
+          <img class="page-footer__copyright-image" src="img/logo-html.png" width="27" height="35" alt="HTMLAcademy">
+        </a>
       </div>
     </div>
   </div>
 </footer>
-</div>
 </body>
 </html>
