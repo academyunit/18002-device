@@ -1631,6 +1631,25 @@ index.html page styles
     letter-spacing: 0.012em;
 }
 
+.company-info__about,
+.company-info__contacts
+{
+    position: relative;
+}
+
+.company-info__about::before,
+.company-info__contacts::before
+{
+    position: absolute;
+    top: -50px;
+
+    width: 80px;
+    height: 8px;
+
+    background: black;
+    content: '';
+}
+
 .company-info__about-description {
     margin-bottom: 40px;
 }
