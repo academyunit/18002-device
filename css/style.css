@@ -108,43 +108,69 @@ Shared components
 
 .btn-device {
     position: relative;
+    z-index: 1;
 
     display: inline-block;
-    padding-top: 9px;
-    padding-right: 5px;
+    vertical-align: middle;
+    padding-top: 10px;
     padding-bottom: 9px;
-    padding-left: 5px;
+    border: none;
 
     font-size: 18px;
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
-    vertical-align: top;
-    text-align: center;
-    color: #000000;
     text-transform: uppercase;
-    text-decoration: none;
+    text-align: center;
     letter-spacing: 3.6px;
+    overflow: hidden;
+
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .btn-device::before {
-    content: "";
     position: absolute;
-    top: 40%;
     left: 0;
+    top: 50%;
     z-index: -1;
 
-    width: 100%;
-    height: 20%;
+    display: block;
+    width: 200px;
 
-    background-color: #f0c52e;
+    -webkit-box-shadow: 0 0 0 4px rgba(240, 197, 46, 1);
+    box-shadow: 0 0 0 4px rgba(240, 197, 46, 1);
+    -webkit-transition-property: -webkit-box-shadow;
+    transition-property: -webkit-box-shadow;
+    -o-transition-property: box-shadow;
+    transition-property: box-shadow;
+    transition-property: box-shadow, -webkit-box-shadow;
+    -webkit-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
 
-    transition: all 0.2s ease-in-out;
+    content: '';
 }
 
-.btn-device:hover::before {
-    top: 0;
-
-    height: 100%;
+.btn-device,
+.btn-device::before
+{
+    width: 200px;
+    margin: 0 auto;
 }
+
+.btn-device:hover::before,
+.btn-device:focus::before {
+    -webkit-box-shadow: 0 0 0px 20px rgba(240, 197, 46, 1);
+    box-shadow: 0 0 0px 20px rgba(240, 197, 46, 1);
+}
+
+.btn-device:active::before {
+    -webkit-box-shadow: 0 0 0px 20px rgba(240, 197, 46, 1);
+    box-shadow: 0 0 0px 20px rgba(240, 197, 46, 1);
+}
+
+.btn-device:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 
 /*
  @todo: remove it from here
@@ -1264,9 +1290,13 @@ index.html page styles
 }
 
 .slider-promo__item-info-btn {
-    min-width: 222px;
-
     margin-bottom: 59px;
+}
+
+.slider-promo__item-info-btn,
+.slider-promo__item-info-btn::before
+{
+    width: 220px;
 }
 
 /* Slider - label functilnality */
@@ -1433,31 +1463,7 @@ index.html page styles
     margin-bottom: 18px;
 }
 
-.slider-services__menu-item:first-of-type .slider-services__menu-link {
-    padding-top: 3px;
-    padding-left: 19px;
-}
-
-.slider-services__menu-item:nth-of-type(2) .slider-services__menu-link  {
-    padding-left: 25px;
-}
-
-.slider-services__menu-item:nth-of-type(3) .slider-services__menu-link  {
-    padding-left: 30px;
-}
-
-.slider-services__menu-link {
-    font-size: 18px;
-
-    min-width: 135px;
-    max-width: 280px;
-    padding-left: 20px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
+.slider-services__menu-link,
 .slider-services__menu-link::before {
     width: 160px;
 }
@@ -1496,8 +1502,21 @@ index.html page styles
     height: 40px;
 
     color: #f0c52e;
-    background-color: #000;
+    background-color: #000000;
     text-align: left;
+
+    -webkit-box-shadow: none;
+     box-shadow: none;
+
+    padding-top: 3px;
+    padding-left: 19px;
+}
+
+#slider-services__menu-item-delivery:checked ~ .slider-services__menu label[for="slider-services__menu-item-delivery"]::before,
+#slider-services__menu-item-warranty:checked ~ .slider-services__menu label[for="slider-services__menu-item-warranty"]::before,
+#slider-services__menu-item-credit:checked ~ .slider-services__menu label[for="slider-services__menu-item-credit"]::before {
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 /* Brands */
@@ -1560,9 +1579,10 @@ index.html page styles
     padding: 0;
 }
 
-.company-info__btn {
-    min-width: 261px;
-    max-width: 475px;
+.company-info__btn,
+.company-info__btn::before
+{
+    width: 260px;
 }
 
 .company-info__contacts-title {
@@ -1585,7 +1605,9 @@ index.html page styles
     margin-bottom: 57px;
 }
 
-.company-info__contacts-btn {
+.company-info__contacts-btn,
+.company-info__contacts-btn::before
+{
     width: 260px;
 }
 
