@@ -536,7 +536,6 @@ Global site Header block
     min-height: 186px;
 
     background: #f7e296;
-    border: 1px solid transparent;
 
     background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, white), color-stop(10%, transparent), color-stop(20%, transparent), color-stop(20%, #f7e296));
 
@@ -622,7 +621,7 @@ Global site Header block
     display: -ms-flexbox;
     display: flex;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 /* Header - search block */
@@ -662,6 +661,7 @@ Global site Header block
 
 .search-form__field,
 .search-form__send {
+    outline: none;
     background-color: #f7e296;
 }
 
@@ -1104,9 +1104,13 @@ Global site Footer block
 }
 
 .page-footer__info-address {
-    margin-top: 32px;
+    margin-top: 26px;
     line-height: 30px;
     color: #ffffff;
+}
+
+.page-footer_catalog .page-footer__info-address {
+    margin-top: 32px;
 }
 
 .page-footer__social {
@@ -1711,8 +1715,8 @@ index.html page styles
     -webkit-box-shadow: none;
     box-shadow: none;
 
-    padding-top: 3px;
-    padding-left: 19px;
+    padding: 3px 19px;
+    padding-top: 6px;
 }
 
 #slider-services__menu-item-delivery:checked ~ .slider-services__menu label[for="slider-services__menu-item-delivery"]::before,
@@ -2146,6 +2150,7 @@ catalog.html page styles
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
