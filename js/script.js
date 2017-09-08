@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
             buttonModalWindowOpen.addEventListener('click', function(e) {
                 e.preventDefault();
                 modalWindow.classList.add('modal-window_show');
+
+                var firstInput = modalWindow.querySelector('input');
+                if (firstInput) {
+                    firstInput.focus();
+                }
             });
         }
         if (buttonModalWindowClose) {
