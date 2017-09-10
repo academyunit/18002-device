@@ -941,6 +941,7 @@ Global site Header block
 
     width: 1160px;
     min-height: 168px;
+    height: 102%;
 
     background: #f7e296;
 
@@ -1622,20 +1623,22 @@ index.html page styles
     line-height: 30px;
     letter-spacing: .018em;
 
-    max-height: 210px;
     overflow: hidden;
 }
 
 .slider-services__items-item:nth-of-type(1) {
     background-image: url("../img/delivery.svg");
+    background-position: 559px 3px;
 }
 
 .slider-services__items-item:nth-of-type(2) {
     background-image: url("../img/warranty.svg");
+    background-position: 531px 0;
 }
 
 .slider-services__items-item:nth-of-type(3) {
     background-image: url("../img/credit.svg");
+    background-position: 543px 0;
 }
 
 .slider-services__items-container {
@@ -1712,6 +1715,7 @@ index.html page styles
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -1959,7 +1963,7 @@ catalog.html page styles
 }
 
 .products__titles {
-    height: 69px;
+    min-height: 69px;
     background: #dbdbdb;
 }
 
@@ -1996,7 +2000,7 @@ catalog.html page styles
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 19px;
+    margin-top: 8px;
 
     -webkit-box-align: center;
 
@@ -2004,7 +2008,10 @@ catalog.html page styles
 
     align-items: center;
 
-    width: 934px;
+    width: 926px;
+    min-height: 52px;
+
+    background: #ebebeb;
 }
 
 .products__sort-title {
