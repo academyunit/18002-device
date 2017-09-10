@@ -1412,8 +1412,8 @@ index.html page styles
 .slider-promo__controls {
     position: absolute;
     z-index: 2;
-    top: 358px;
-    right: 67px;
+    right: 66px;
+    bottom: 137px;
 
     width: 110px;
     min-height: 50px;
