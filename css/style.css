@@ -958,9 +958,9 @@ Global site Header block
 .page-header__nav-goods::before {
     position: absolute;
     top: -7px;
-    left: -61px;
+    left: -60px;
 
-    width: 1161px;
+    width: 1160px;
     min-height: 168px;
 
     background: #f7e296;
@@ -2411,7 +2411,7 @@ catalog.html page styles
 .range-control__selected-price-max
 {
     width: 87px;
-    height: 15px;
+    height: 20px;
     border: 0;
 
     background-color: transparent;
