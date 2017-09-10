@@ -273,7 +273,11 @@ Shared components
     display: -ms-flexbox;
 
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     margin: 0;
@@ -309,6 +313,8 @@ Shared components
 
 .pagination__item:first-child,
 .pagination__item:last-child {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
@@ -622,6 +628,10 @@ Global site Header block
     position: relative;
 
     width: 479px;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
 
     display: flex;
 
@@ -1106,9 +1116,14 @@ Global site Footer block
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-item-align: center;
     align-self: center;
 
     width: 140px;
+
+    -webkit-box-pack: justify;
+
+    -ms-flex-pack: justify;
 
     justify-content: space-between;
 }
@@ -1126,7 +1141,12 @@ Global site Footer block
 }
 
 .page-footer__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
     width: 440px;
@@ -1459,6 +1479,7 @@ index.html page styles
 
     transform: translate(-50%, -50%);
 }
+
 .slider-promo__item-info {
     position: relative;
 }
@@ -1494,6 +1515,7 @@ index.html page styles
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -1702,6 +1724,10 @@ index.html page styles
     -webkit-box-shadow: none;
     box-shadow: none;
 
+    -webkit-transition: none;
+
+    -o-transition: none;
+
     transition: none;
 }
 
@@ -1715,6 +1741,7 @@ index.html page styles
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -1974,6 +2001,9 @@ catalog.html page styles
 }
 
 .products__titles {
+    background: -webkit-gradient(linear, left top, right top, color-stop(32.6%, #dbdbdb), color-stop(32.6%, #ebebeb), to(#ebebeb));
+    background: -webkit-linear-gradient(left, #dbdbdb 32.6%, #ebebeb 32.6%, #ebebeb 100%);
+    background: -o-linear-gradient(left, #dbdbdb 32.6%, #ebebeb 32.6%, #ebebeb 100%);
     background: linear-gradient(to right, #dbdbdb 32.6%, #ebebeb 32.6%, #ebebeb 100%);
 }
 
@@ -2126,6 +2156,8 @@ catalog.html page styles
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-top: 21px;
 }
@@ -2245,6 +2277,9 @@ catalog.html page styles
 }
 
 .products__items {
+    background: -webkit-gradient(linear, left top, right top, color-stop(32.6%, #ebebeb), color-stop(32.6%, #ffffff), to(#ffffff));
+    background: -webkit-linear-gradient(left, #ebebeb 32.6%, #ffffff 32.6%, #ffffff 100%);
+    background: -o-linear-gradient(left, #ebebeb 32.6%, #ffffff 32.6%, #ffffff 100%);
     background: linear-gradient(to right, #ebebeb 32.6%, #ffffff 32.6%, #ffffff 100%);
 }
 
