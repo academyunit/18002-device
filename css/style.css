@@ -547,26 +547,26 @@ Global site Header block
 
     background: #f7e296;
 
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, white), color-stop(10%, transparent), color-stop(20%, transparent), color-stop(20%, #f7e296));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(7%, white), color-stop(7%, transparent), color-stop(23%, transparent), color-stop(23%, #f7e296));
 
-    background: -webkit-linear-gradient(top, white 10%, transparent 10%, transparent 20%, #f7e296 20%);
+    background: -webkit-linear-gradient(top, white 7%, transparent 7%, transparent 23%, #f7e296 23%);
 
-    background: -o-linear-gradient(top, white 10%, transparent 10%, transparent 20%, #f7e296 20%);
+    background: -o-linear-gradient(top, white 7%, transparent 7%, transparent 23%, #f7e296 23%);
 
-    background: linear-gradient(to bottom, white 10%, transparent 10%, transparent 20%, #f7e296 20%);
+    background: linear-gradient(to bottom, white 7%, transparent 7%, transparent 23%, #f7e296 23%);
 }
 
 .page-header_catalog {
     min-height: 226px;
     margin-bottom: 47px;
 
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, white), color-stop(5%, transparent), color-stop(17%, transparent), color-stop(17%, #f7e296));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(7%, white), color-stop(7%, transparent), color-stop(18%, transparent), color-stop(18%, #f7e296));
 
-    background: -webkit-linear-gradient(top, white 5%, transparent 5%, transparent 17%, #f7e296 17%);
+    background: -webkit-linear-gradient(top, white 7%, transparent 7%, transparent 18%, #f7e296 18%);
 
-    background: -o-linear-gradient(top, white 5%, transparent 5%, transparent 17%, #f7e296 17%);
+    background: -o-linear-gradient(top, white 7%, transparent 7%, transparent 18%, #f7e296 18%);
 
-    background: linear-gradient(to bottom, white 5%, transparent 5%, transparent 17%, #f7e296 17%);
+    background: linear-gradient(to bottom, white 7%, transparent 7%, transparent 18%, #f7e296 18%);
 }
 
 .page-header_catalog .page-header__logo {
@@ -609,7 +609,7 @@ Global site Header block
     margin: 0;
     padding: 0;
     margin-top: 27px;
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 
     color: #000000;
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
@@ -2196,14 +2196,17 @@ catalog.html page styles
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-top: 21px;
+}
+
+.products__items-item-image {
+    margin-bottom: 25px;
 }
 
 .products__items-item-link {
     width: 266px;
     margin: 0;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 20px;
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     color: #000;
     letter-spacing: .012em;
@@ -2307,6 +2310,8 @@ catalog.html page styles
 }
 
 .products__items-item-price {
+    margin-top: -5px;
+
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.16px;
