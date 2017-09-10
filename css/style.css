@@ -699,7 +699,7 @@ Global site Header block
     border: 0;
     border-bottom: 2px solid transparent;
 
-    opacity: 0.3;
+    opacity: 0.6;
 }
 
 .search-form__field:hover {
