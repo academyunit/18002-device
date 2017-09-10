@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
             zoom: 16
         });
         myMap.geoObjects.add(new ymaps.Placemark([59.93855426, 30.32247950], {
-            balloonContentHeader: "<strong>Gllacy</strong>",
-            balloonContentBody: "191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8",
+            balloonContentHeader: "<strong>Device</strong>",
+            balloonContentBody: "191186, г. Москва,<br>ул. Строителей, 15",
             balloonContentFooter: "тел. +7 (812) 275-75-75"
         }, {
             iconLayout: "default#image",

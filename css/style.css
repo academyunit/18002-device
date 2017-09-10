@@ -246,6 +246,7 @@ Shared components
 
 .breadcrumbs-link {
     display: inline-block;
+    vertical-align: top;
 
     max-width: 560px;
     max-height: 30px;
@@ -324,9 +325,10 @@ Shared components
 
 .pagination__item-link {
     display: inline-block;
+    vertical-align: middle;
+
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 16px;
-    vertical-align: baseline;
     color: rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
     text-decoration: none;
@@ -407,6 +409,11 @@ Shared components
 
 .modal-window_show {
     display: block;
+
+    -webkit-animation: bounce;
+    animation: bounce;
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
 }
 
 .modal-window__close {
@@ -460,6 +467,34 @@ Shared components
 
 .modal-window__close:active {
     opacity: 0.6;
+}
+
+/* Modal window animation */
+
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translate(-30%, -50%);
+        transform: translate(-30%, -50%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(-50%, -50%);
+        transform: translateX(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: translate(-30%, -50%);
+        transform: translate(-30%, -50%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(-50%, -50%);
+        transform: translateX(-50%, -50%);
+        opacity: 1;
+    }
 }
 
 /* Social buttons */
@@ -551,9 +586,10 @@ Global site Header block
 /* Header - upper level (search + actions) */
 .page-header__logo {
     display: inline-block;
+    vertical-align: top;
+
     margin: 0;
     padding: 0;
-
     margin-top: 27px;
     margin-bottom: 18px;
 
@@ -686,10 +722,6 @@ Global site Header block
 }
 
 /* Header - search form (show search bar functionality) */
-
-.search-form__send_active {
-    display: inline-block;
-}
 
 .search-form__field:focus {
     border-bottom: 2px solid black;
@@ -1692,7 +1724,9 @@ index.html page styles
 
 .brands__list-link {
     position: relative;
+
     display: inline-block;
+    vertical-align: top;
 
     width: 260px;
     height: 109px;
@@ -2006,11 +2040,14 @@ catalog.html page styles
 
 .products__sort-list-item {
     display: inline-block;
+    vertical-align: top;
+
     margin-left: 25px;
 }
 
 .products__sort-type-icon {
     display: inline-block;
+    vertical-align: top;
 
     width: 0;
     height: 0;
@@ -2073,6 +2110,11 @@ catalog.html page styles
     margin-top: 70px;
 }
 
+.products__items-item:nth-of-type(2) .products__items-item-link {
+    width: 256px;
+    word-spacing: 25px;
+}
+
 .products__items-item-description {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2082,7 +2124,7 @@ catalog.html page styles
 }
 
 .products__items-item-link {
-    width: 256px;
+    width: 266px;
     margin: 0;
     font-size: 18px;
     line-height: 24px;
