@@ -209,6 +209,7 @@ Shared components
 
 .breadcrumbs-item {
     display: inline-block;
+    vertical-align: top;
 
     position: relative;
     padding-right: 21px;
